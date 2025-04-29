@@ -1,0 +1,24 @@
+---
+interface Props {
+  variant?: "primary" | "secondary";
+  size?: "L" | "M";
+  className?: string;
+}
+
+const { variant = "primary", size = "M", className } = Astro.props;
+---
+
+<button
+  class:list={[
+    "body-m font-medium  rounded-full cursor-pointer",
+    {
+      "py-8 px-10": size === "M",
+      "py-16 px-16": size === "L",
+      "bg-primary text-fg-grey-primary-white": variant === "primary",
+      "bg-secondary text-fg-grey-secondary": variant === "secondary",
+    },
+    className,
+  ]}
+>
+  <slot />
+</button>

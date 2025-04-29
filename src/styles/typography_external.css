@@ -1,0 +1,108 @@
+:root {
+  --weight-extra-light: 200;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* desktop variable scaling */
+  @media (min-width: 1040px) {
+    --responsive-font-size-10: 10px;
+    --responsive-font-size-12: 12px;
+    --responsive-font-size-14: 14px;
+    --responsive-font-size-16: 16px;
+    --responsive-font-size-18: 18px;
+    --responsive-font-size-20: 20px;
+    --responsive-font-size-24: 24px;
+    --responsive-font-size-32: 32px;
+    --responsive-font-size-36: 36px;
+    --responsive-font-size-40: 40px;
+    --responsive-font-size-48: 48px;
+    --responsive-font-size-64: 64px;
+    --responsive-font-size-80: 80px;
+    --responsive-font-size-96: 96px;
+
+    --responsive-line-height-12: 12px;
+    --responsive-line-height-14: 14px;
+    --responsive-line-height-16: 16px;
+    --responsive-line-height-20: 20px;
+    --responsive-line-height-24: 24px;
+    --responsive-line-height-28: 28px;
+    --responsive-line-height-32: 32px;
+    --responsive-line-height-36: 36px;
+    --responsive-line-height-40: 40px;
+    --responsive-line-height-44: 44px;
+    --responsive-line-height-56: 56px;
+    --responsive-line-height-64: 64px;
+    --responsive-line-height-72: 72px;
+    --responsive-line-height-80: 80px;
+    --responsive-line-height-96: 96px;
+  }
+
+  /* tablet variable scaling */
+  @media (max-width: 1040px) {
+    --responsive-font-size-10: 10px;
+    --responsive-font-size-12: 12px;
+    --responsive-font-size-14: 14px;
+    --responsive-font-size-16: 16px;
+    --responsive-font-size-18: 18px;
+    --responsive-font-size-20: 20px;
+    --responsive-font-size-24: 24px;
+    --responsive-font-size-32: 32px;
+    --responsive-font-size-36: 36px;
+    --responsive-font-size-40: 40px;
+    --responsive-font-size-48: 48px;
+    --responsive-font-size-64: 64px;
+    --responsive-font-size-80: 80px;
+    --responsive-font-size-96: 96px;
+
+    --responsive-line-height-12: 12px;
+    --responsive-line-height-14: 14px;
+    --responsive-line-height-16: 16px;
+    --responsive-line-height-20: 20px;
+    --responsive-line-height-24: 24px;
+    --responsive-line-height-28: 28px;
+    --responsive-line-height-32: 32px;
+    --responsive-line-height-36: 36px;
+    --responsive-line-height-44: 44px;
+    --responsive-line-height-56: 56px;
+    --responsive-line-height-64: 64px;
+    --responsive-line-height-72: 72px;
+    --responsive-line-height-80: 80px;
+    --responsive-line-height-96: 96px;
+  }
+
+  /* mobile variable scaling */
+  @media (max-width: 768px) {
+    --responsive-font-size-10: 10px;
+    --responsive-font-size-12: 12px;
+    --responsive-font-size-14: 14px;
+    --responsive-font-size-16: 16px;
+    --responsive-font-size-18: 18px;
+    --responsive-font-size-20: 20px;
+    --responsive-font-size-24: 24px;
+    --responsive-font-size-32: 32px;
+    --responsive-font-size-36: 36px;
+    --responsive-font-size-40: 40px;
+    --responsive-font-size-48: 48px;
+    --responsive-font-size-64: 64px;
+    --responsive-font-size-80: 80px;
+    --responsive-font-size-96: 96px;
+
+    --responsive-line-height-12: 12px;
+    --responsive-line-height-14: 14px;
+    --responsive-line-height-16: 16px;
+    --responsive-line-height-20: 20px;
+    --responsive-line-height-24: 24px;
+    --responsive-line-height-28: 28px;
+    --responsive-line-height-32: 32px;
+    --responsive-line-height-36: 36px;
+    --responsive-line-height-44: 44px;
+    --responsive-line-height-56: 56px;
+    --responsive-line-height-64: 64px;
+    --responsive-line-height-72: 72px;
+    --responsive-line-height-80: 80px;
+    --responsive-line-height-96: 96px;
+  }
+}

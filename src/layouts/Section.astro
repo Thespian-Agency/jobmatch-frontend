@@ -1,0 +1,25 @@
+---
+
+interface Props {
+  className?: string;
+	pt?: boolean;
+	pb?: boolean;
+}
+
+const {
+  className,
+	pt = false,
+	pb = false,
+} = Astro.props;
+---
+
+<section class:list={[
+	"flex container relative border border-red-500",
+	className,
+	{
+		"pt-128": pt,
+		"pb-128": pb,
+	}
+]}>
+		<slot />
+</section>

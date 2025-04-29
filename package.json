@@ -2,13 +2,23 @@
   "name": "jobmatch-frontend",
   "type": "module",
   "version": "0.0.1",
+  "license": "UNLICENSED",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev -p 3000",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.7.6"
+    "@astrojs/react": "^4.2.5",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "astro": "^5.7.6",
+    "classnames": "^2.5.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "swiper": "^11.2.6",
+    "tailwindcss": "^4.1.4"
   }
 }

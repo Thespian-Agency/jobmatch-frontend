@@ -1,0 +1,160 @@
+:root {
+  /* radius variables */
+  --rounded-6: 6px;
+  --rounded-8: 8px;
+  --rounded-10: 10px;
+  --rounded-12: 12px;
+  --rounded-16: 16px;
+  --rounded-24: 24px;
+  --rounded-32: 32px;
+
+  /* desktop variable scaling */
+  @media (min-width: 1040px) {
+    --g-responsive-2: 2px;
+    --g-responsive-4: 4px;
+    --g-responsive-6: 6px;
+    --g-responsive-8: 8px;
+    --g-responsive-10: 10px;
+    --g-responsive-12: 12px;
+    --g-responsive-16: 16px;
+    --g-responsive-20: 20px;
+    --g-responsive-24: 24px;
+    --g-responsive-32: 32px;
+    --g-responsive-40: 40px;
+    --g-responsive-52: 52px;
+    --g-responsive-56: 56px;
+    --g-responsive-64: 64px;
+    --g-responsive-80: 80px;
+    --g-responsive-96: 96px;
+    --g-responsive-128: 128px;
+    --g-responsive-192: 192px;
+    --g-responsive-256: 256px;
+
+    /* padding variables */
+    --p-responsive-2: 2px;
+    --p-responsive-4: 4px;
+    --p-responsive-6: 6px;
+    --p-responsive-8: 8px;
+    --p-responsive-10: 10px;
+    --p-responsive-12: 12px;
+    --p-responsive-16: 16px;
+    --p-responsive-20: 20px;
+    --p-responsive-24: 24px;
+    --p-responsive-32: 32px;
+    --p-responsive-40: 40px;
+    --p-responsive-44: 44px;
+    --p-responsive-52: 52px;
+    --p-responsive-56: 56px;
+    --p-responsive-64: 64px;
+    --p-responsive-72: 72px;
+    --p-responsive-80: 80px;
+    --p-responsive-88: 88px;
+    --p-responsive-90: 90px;
+    --p-responsive-96: 96px;
+    --p-responsive-112: 112px;
+    --p-responsive-120: 120px;
+    --p-responsive-128: 128px;
+    --p-responsive-160: 160px;
+    --p-responsive-176: 176px;
+  }
+
+  /* tablet variable scaling */
+  @media (max-width: 1040px) {
+    /* gap variables */
+    --g-responsive-2: 2px;
+    --g-responsive-4: 4px;
+    --g-responsive-6: 6px;
+    --g-responsive-8: 8px;
+    --g-responsive-10: 8px;
+    --g-responsive-12: 12px;
+    --g-responsive-16: 16px;
+    --g-responsive-20: 18px;
+    --g-responsive-24: 20px;
+    --g-responsive-32: 28px;
+    --g-responsive-40: 36px;
+    --g-responsive-52: 44px;
+    --g-responsive-56: 48px;
+    --g-responsive-64: 40px;
+    --g-responsive-80: 72px;
+    --g-responsive-96: 80px;
+    --g-responsive-128: 96px;
+    --g-responsive-192: 128px;
+    --g-responsive-256: 192px;
+    /* padding variables */
+    --p-responsive-2: 2px;
+    --p-responsive-4: 4px;
+    --p-responsive-6: 6px;
+    --p-responsive-8: 8px;
+    --p-responsive-10: 8px;
+    --p-responsive-12: 10px;
+    --p-responsive-16: 14px;
+    --p-responsive-20: 18px;
+    --p-responsive-24: 20px;
+    --p-responsive-32: 28px;
+    --p-responsive-40: 36px;
+    --p-responsive-44: 40px;
+    --p-responsive-52: 44px;
+    --p-responsive-56: 48px;
+    --p-responsive-64: 32px;
+    --p-responsive-72: 64px;
+    --p-responsive-80: 72px;
+    --p-responsive-88: 82px;
+    --p-responsive-90: 82px;
+    --p-responsive-96: 80px;
+    --p-responsive-112: 96px;
+    --p-responsive-120: 112px;
+    --p-responsive-128: 120px;
+    --p-responsive-160: 144px;
+    --p-responsive-176: 160px;
+  }
+
+  /* mobile variable scaling */
+  @media (max-width: 768px) {
+    /* gap variables */
+    --g-responsive-2: 2px;
+    --g-responsive-4: 4px;
+    --g-responsive-6: 6px;
+    --g-responsive-8: 6px;
+    --g-responsive-10: 8px;
+    --g-responsive-12: 12px;
+    --g-responsive-16: 14px;
+    --g-responsive-20: 16px;
+    --g-responsive-24: 18px;
+    --g-responsive-32: 24px;
+    --g-responsive-40: 28px;
+    --g-responsive-52: 32px;
+    --g-responsive-56: 32px;
+    --g-responsive-64: 32px;
+    --g-responsive-80: 48px;
+    --g-responsive-96: 64px;
+    --g-responsive-128: 80px;
+    --g-responsive-192: 96px;
+    --g-responsive-256: 128px;
+    /*padding variables */
+    --p-responsive-2: 2px;
+    --p-responsive-4: 4px;
+    --p-responsive-6: 6px;
+    --p-responsive-8: 6px;
+    --p-responsive-10: 6px;
+    --p-responsive-12: 8px;
+    --p-responsive-16: 10px;
+    --p-responsive-20: 14px;
+    --p-responsive-24: 18px;
+    --p-responsive-32: 24px;
+    --p-responsive-40: 28px;
+    --p-responsive-44: 24px;
+    --p-responsive-52: 36px;
+    --p-responsive-56: 36px;
+    --p-responsive-64: 16px;
+    --p-responsive-72: 56px;
+    --p-responsive-80: 56px;
+    --p-responsive-88: 48px;
+    --p-responsive-90: 52px;
+    --p-responsive-96: 56px;
+    --p-responsive-112: 80px;
+    --p-responsive-120: 88px;
+    --p-responsive-128: 96px;
+    --p-responsive-160: 138px;
+    --p-responsive-176: 144px;
+  }
+}

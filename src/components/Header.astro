@@ -1,0 +1,61 @@
+---
+import { Image } from 'astro:assets';
+import Button from './Button.astro';
+
+const links = [
+	{
+		label: "Usluge",
+		id: "usluge",
+	},
+	{
+		label: "Interpretacija testa",
+		id: "interpretacija",
+	},
+	{
+		label: "Prednosti",
+		id: "prednosti",
+	},
+	{
+		label: "Iskustva",
+		id: "iskustva",
+	},
+	{
+		label: "Proces",
+		id: "proces",
+	},
+	{
+		label: "FAQ",
+		id: "faq",
+	},
+];
+---
+
+<header class="flex h-72 px-56 py-16 justify-between items-center sticky top-0 backdrop-blur-xl z-10">
+	<div class="left-part flex gap-32 items-center">
+		<div class="px-24 py-2">
+			<Image src="/logo.png" alt="logo" width={181} height={36}   />
+		</div>
+		<nav>
+			<ul class="flex gap-24">
+				{links.map((link) => (
+					<li>
+						<a class="body-m  font-regular text-fg-grey-tertiary" href={`#${link.id}`}>{link.label}</a>
+					</li>
+				))}
+			</ul>
+		</nav>
+	</div>
+	<div class="right-part flex gap-12">
+		<Button variant="primary">Dogovorite demo</Button>
+		<Button variant="secondary">Kontaktirajte nas</Button>
+	</div>
+</header>
+
+<style>
+	/* Add smooth scrolling behavior to the entire page */
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+</style>
+
+

@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+
+
+interface Props {
+  category: "personality-test" | "logic-test" | "screening-test" | "certification"
+  top: {
+    title: string;
+    description: string;
+  }
+  bottom: {
+    title: string;
+    description: string;
+  }
+}
+
+const { category, top, bottom } = Astro.props;
+---
+
+<div class="flex flex-col rounded-32 overflow-hidden bg-grey-dark-50">
+	<div class="top-part flex gap-16 items-center p-32 bg-custom-grey">
+		<Image src={`/icons/${category}.png`} alt={top.title} width={68} height={68} />
+		<div class="flex flex-col gap-8">
+			<p class="body-xl font-medium text-title-grey">{top.title}</p>
+			<p class="body-m font-regular text-fg-grey-quarternary">{top.description}</p>
+		</div>
+	</div>
+  <div class="flex flex-col gap-12 p-32">
+    <h3 class="heading-s font-regular text-title-grey">{bottom.title}</h3>
+    <p class="body-xl font-light text-description-grey">{bottom.description}</p>
+  </div>
+  <div class="bottom-part flex gap-16 items-center justify-center   h-fit">
+    <Image src={`/graphics/${category}.png`} alt={bottom.title} width={500} height={200} />
+  </div>
+</div>

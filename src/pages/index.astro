@@ -1,11 +1,227 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import { Image } from "astro:assets";
+import Button from "../components/Button.astro";
+import Layout from "../layouts/Layout.astro";
+import Section from "../layouts/Section.astro";
+import SelectionToolItem from "../layouts/SelectionToolItem.astro";
+import "../styles/global.css";
+import ProfileIconsGraphic from "../react/ProfileIconsGraphic.tsx";
+import SelectionItems from "../react/SelectionItems.tsx";
+import { getEntry, type CollectionEntry } from "astro:content";
+import TestimonialSlider from "../react/TestimonialSlider.tsx";
+import { getEntries } from "astro:content";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const homepage = (await getEntry(
+  "homepage",
+  "-index"
+)) as CollectionEntry<"homepage">;
+const {
+  selection_items,
+  testimonials,
+  our_process,
+  team_player,
+  for_who,
+  faq,
+} = homepage.data;
 ---
 
 <Layout>
-	<Welcome />
+  <Section pt pb>
+    <div class="left-part max-w-[600px] w-1/2 flex flex-col gap-24">
+      <div class="flex flex-col gap-24">
+        <h1 class="heading-2xl text-title-grey font-medium">
+          Kandidat zna što želite čuti. <span class="text-primary"
+            >JobMatch</span
+          > zna što trebate znati.
+        </h1>
+        <p class="heading-xs font-light text-description-grey">
+          JobMatch vam pomaže procijeniti kandidate i zaposlenike brzo, precizno
+          i dokazano – od prijave, preko intervjua, do razvoja i zadržavanja
+          najboljih ljudi.
+        </p>
+      </div>
+      <div class="flex gap-24">
+        <Button size="L" variant="primary">Kontaktirajte nas</Button>
+        <Button size="L" variant="secondary">Kontaktirajte nas</Button>
+      </div>
+    </div>
+    <div class="right-part w-1/2 flex items-center justify-center">
+      <h1>Hello World</h1>
+    </div>
+  </Section>
+  <Section className="gap-80 flex flex-col" pt pb>
+    <div class="top-part flex flex-col gap-40">
+      <h2 class="heading-2xl font-light text-title-grey">
+        Alati za učinkovitiju selekciju
+      </h2>
+      <p class="body-xl font-light text-description-grey">
+        JobMatch daje uvid u ono što ne piše u životopisu i vodi vas cijelim
+        putem, od prijave do razvoja.
+      </p>
+    </div>
+    <div class="grid grid-cols-2 gap-44">
+      <SelectionToolItem
+        category="personality-test"
+        top={{
+          title: "Test osobnosti (JobMatch Talent)",
+          description: "Detaljan uvid u radnu osobnost zaposlenika",
+        }}
+        bottom={{
+          title: "Razvijen za predviđanje učinka",
+          description:
+            "Precizan psihometrijski test koji otkriva ponašanje zaposlenika na poslu, koliko odgovaraju poziciji i kako se uklapaju u vaš tim.",
+        }}
+      />
+      <SelectionToolItem
+        category="screening-test"
+        top={{
+          title: "Screening test (JobMatch Screen)",
+          description: "Automatski sortirajte brojne prijave",
+        }}
+        bottom={{
+          title: "Bolja selekcija uz minimalan utrošak vremena i resursa.",
+          description:
+            "Brzi, 10-minutni test za inicijalnu selekciju kandidata.",
+        }}
+      />
+      <SelectionToolItem
+        category="logic-test"
+        top={{
+          title: "Test logike i sposobnosti (JobMatch LogiQ)",
+          description:
+            "Testirajte kako kandidati razmišljaju, ne samo što znaju",
+        }}
+        bottom={{
+          title: "Znanstveno potvrđeni adaptivni testovi IQ-a i sposobnosti",
+          description:
+            "Pouzdan test logičkog zaključivanja, matematičkih vještina i sposobnosti rješavanja kompleksnih problema.",
+        }}
+      />
+      <SelectionToolItem
+        category="certification"
+        top={{
+          title: "Certifikacija (JobMatch Certificate)",
+          description: "Preuzmite selekciju u svoje ruke",
+        }}
+        bottom={{
+          title: "Bolji uvid u ljude znači sigurniji izbor za vaš tim.",
+          description:
+            "Ovladajte alatima koji vam pomažu razumjeti i birati najbolje kandidate.",
+        }}
+      />
+    </div>
+  </Section>
+  <Section pt pb>
+    <div class="left-part max-w-[600px] w-1/2 flex flex-col gap-24">
+      <div class="flex flex-col gap-24">
+        <h2 class="heading-2xl text-title-grey font-light">
+          Ne stajete na rezultatu? Ni mi.
+        </h2>
+        <p class="heading-xs font-light text-description-grey">
+          Rezultat je samo dio priče. Naši stručnjaci vam kroz primjere
+          otkrivaju kako osobine funkcioniraju zajedno i kako se to ponašanje
+          vidi u stvarnom radu. Otkrijte na što vrijedi obratiti pažnju, kod
+          ovog profila, i kod svakog sljedećeg.
+        </p>
+      </div>
+      <div class="flex gap-24">
+        <Button size="L" variant="primary">Ugovorite interpretaciju</Button>
+      </div>
+    </div>
+    <Image
+      class="absolute right-0 top-0 w-[50%] h-full rounded-l-32 object-cover"
+      src="/images/results.webp"
+      alt="JobMatch result"
+      width={500}
+      height={500}
+    />
+  </Section>
+  <Section pt pb className="flex justify-center">
+    <div class="flex flex-col gap-56 items-center">
+      <div class="flex flex-col gap-24 max-w-[780px] items-center">
+        <h2 class="heading-2xl text-title-grey font-light text-center">
+          Vi birate profil. <span class="text-primary">JobMatch</span> pokazuje tko
+          ga ispunjava.
+        </h2>
+        <p
+          class="body-xl font-light text-description-grey text-center max-w-[600px]"
+        >
+          Birajte između više od 145 profesionalnih profila i odmah vidite tko
+          najbolje odgovara baš onome što tražite.
+        </p>
+        <div class="flex gap-24 justify-center">
+          <Button size="L" variant="primary">Dogovorite demo</Button>
+          <Button size="L" variant="secondary">Kontaktirajte nas</Button>
+        </div>
+      </div>
+      <ProfileIconsGraphic client:visible />
+    </div>
+  </Section>
+  <Section pt pb className="flex flex-col gap-80">
+    <div class="flex flex-col gap-40">
+      <h2 class="heading-2xl text-title-grey font-light">Zašto JobMatch?</h2>
+      <p class="body-xl font-light text-description-grey max-w-[600px]">
+        Nema čarobne formule za zapošljavanje, ali neki alati ipak znaju
+        olakšati stvari.
+      </p>
+    </div>
+    <SelectionItems client:idle selection_items={selection_items} />
+  </Section>
+  <Section pt pb>
+    <TestimonialSlider client:idle testimonials={testimonials} />
+  </Section>
+  <Section pt pb className="flex flex-col gap-80">
+    <h2 class="heading-2xl text-title-grey font-light">
+      {our_process.title}
+    </h2>
+    <div class="flex gap-24">
+      {
+        our_process.items.map((item, index) => (
+          <div class="flex flex-col w-full gap-24 bg-[#F7F7F7] p-24 rounded-32">
+            <Image
+              src={`/icons/process-${index + 1}.png`}
+              alt="JobMatch process"
+              width={56}
+              height={56}
+            />
+            <h3 class="heading-xs text-title-grey font-medium">{item.title}</h3>
+            <p class="body-l font-light text-description-grey">
+              {item.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
+  <Section pt pb className="">
+    <div class="relative w-full flex items-end justify-end aspect-[2/1]">
+      <Image
+        src="/images/team-player.webp"
+        alt="JobMatch team player"
+        width={500}
+        height={500}
+        class="absolute right-0 top-0 w-full h-full rounded-32 object-cover"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 rounded-32"
+      >
+      </div>
+      <div class="flex w-full justify-between items-end gap-40 relative p-56">
+        <div class="flex flex-col gap-24 max-w-[560px]">
+          <h2 class="heading-2xl text-fg-grey-primary-white font-medium">
+            {team_player.title}
+          </h2>
+          <p class="body-xl font-light text-fg-grey-primary-white">
+            {team_player.description}
+          </p>
+        </div>
+        <div class="flex gap-24">
+          <Button size="L" variant="primary"
+            >Isprobajte JobMatch besplatno</Button
+          >
+          <Button size="L" variant="secondary">Kontaktirajte nas</Button>
+        </div>
+      </div>
+    </div>
+  </Section>
 </Layout>

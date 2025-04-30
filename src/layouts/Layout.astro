@@ -1,16 +1,55 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import { Schema } from "astro-seo-schema";
+import { SEO } from "astro-seo";
+import { withBase } from "../utils/withBase";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
+    <meta name="robots" content="noindex, nofollow" />
+
+    <Schema
+      item={{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "JobMatch",
+        sameAs: ["https://www.jobmatchtalent.com/"],
+        description:
+          "JobMatch vam pomaže procijeniti kandidate i zaposlenike brzo, precizno i dokazano",
+        url: "https://jobmatch.hr",
+        image: withBase("/logo.png"),
+        contactPoint: {
+          "@type": "ContactPoint",
+          email: "info@thespian.hr",
+          contactType: "Customer Support",
+          areaServed: "HR & Recruitment",
+          availableLanguage: ["hr", "en"],
+        },
+        serviceType: "JobMatch",
+      }}
+    />
+    <SEO
+      title="JobMatch"
+      description="JobMatch vam pomaže procijeniti kandidate i zaposlenike brzo, precizno i dokazano"
+      openGraph={{
+        basic: {
+          title: "JobMatch",
+          type: "website",
+          url: "https://jobmatch.hr",
+          image: withBase("/logo.png"),
+        },
+      }}
+      extend={{
+        link: [{ rel: "icon", href: withBase("/favicon.ico") }],
+      }}
+    />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>JobMatch</title>
   </head>
   <body class="relative h-auto">
     <Header />

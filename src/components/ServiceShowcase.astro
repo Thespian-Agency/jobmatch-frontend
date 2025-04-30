@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import { withBase } from "../utils/withBase";
+import type { CollectionEntry } from "astro:content";
+
+export type ServiceType =
+  CollectionEntry<"homepage">["data"]["services"]["items"][number];
+
+interface Props {
+  service: ServiceType;
+  index: number;
+}
+
+const { service, index } = Astro.props;
+---
+
+<div class="flex flex-col rounded-32 overflow-hidden bg-grey-dark-50">
+  <div class="top-part flex gap-16 items-center p-32 bg-custom-grey">
+    <Image
+      src={withBase(`/icons/service-${index}.png`)}
+      alt={service.top.title}
+      width={68}
+      height={68}
+    />
+    <div class="flex flex-col gap-8">
+      <p class="body-xl font-medium text-title-grey">{service.top.title}</p>
+      <p class="body-m font-regular text-fg-grey-quarternary">
+        {service.top.description}
+      </p>
+    </div>
+  </div>
+  <div class="flex flex-col gap-12 p-32">
+    <h3 class="heading-s font-regular text-title-grey">{service.title}</h3>
+    <p class="body-xl font-light text-description-grey">
+      {service.description}
+    </p>
+  </div>
+  <div class="bottom-part flex gap-16 items-center justify-center h-fit">
+    <Image
+      src={withBase(`/graphics/service-${index}.png`)}
+      alt={service.title}
+      width={500}
+      height={200}
+    />
+  </div>
+</div>

@@ -1,13 +1,55 @@
 ---
-selection_items:
-  - title: Najtočniji prediktivni rezultat na tržištu
-    description: S prediktivnom valjanošću od 0,63, JobMatch Talent vam daje najtočniji uvid u to kako će kandidat raditi, i prije nego što ga zaposlite.
-  - title: Ocijenjen kao 87,3% točan.
-    description: Test koji zaista opisuje karakteristike na poslu i način rada – prema onima koji su ga sami ispunili.
-  - title: Uvid u osobnost na radnom mjestu
-    description: JobMatch test nije osmišljen za općenite opise osobnosti, već da predvidi ponašanje na poslu i pomogne vam odabrati, razviti i voditi ljude na temelju stvarnih rezultata.
-  - title: Vidi ispod površine
-    description: JobMatch kombinira 30 osobina u više od 600 profila i prikazuje nijanse u ponašanju koje čine razliku između dobrog kandidata i pravog kandidata.
+buttons:
+  schedule_demo: Dogovorite demo
+  contact_us: Kontaktirajte nas
+  schedule_iterpretation: Ugovorite interpretaciju
+  try_for_free: Isprobajte JobMatch besplatno
+hero:
+  title: Kandidat zna što želite čuti. <span class="text-primary">JobMatch</span> zna što trebate znati.
+  description: JobMatch vam pomaže procijeniti kandidate i zaposlenike brzo, precizno i dokazano – od prijave, preko intervjua, do razvoja i zadržavanja najboljih ljudi.
+services:
+  title: Alati za učinkovitiju selekciju
+  subtitle: JobMatch daje uvid u ono što ne piše u životopisu i vodi vas cijelim putem, od prijave do razvoja.
+  items:
+    - top:
+        title: Test osobnosti (JobMatch Talent)
+        description: Detaljan uvid u radnu osobnost zaposlenika
+      title: Razvijen za predviđanje učinka
+      description: Precizan psihometrijski test koji otkriva ponašanje zaposlenika na poslu, koliko odgovaraju poziciji i kako se uklapaju u vaš tim.
+    - top:
+        title: Screening test (JobMatch Screen)
+        description: Automatski sortirajte brojne prijave
+      title: Bolja selekcija uz minimalan utrošak vremena i resursa.
+      description: Brzi, 10-minutni test za inicijalnu selekciju kandidata.
+    - top:
+        title: Test logike i sposobnosti (JobMatch LogiQ)
+        description: Testirajte kako kandidati razmišljaju, ne samo što znaju
+      title: Znanstveno potvrđeni adaptivni testovi IQ-a i sposobnosti
+      description: Pouzdan test logičkog zaključivanja, matematičkih vještina i sposobnosti rješavanja kompleksnih problema.
+    - top:
+        title: Certifikacija (JobMatch Certificate)
+        description: Preuzmite selekciju u svoje ruke
+      title: Bolji uvid u ljude znači sigurniji izbor za vaš tim.
+      description: Ovladajte alatima koji vam pomažu razumjeti i birati najbolje kandidate.
+results:
+  title: Ne stajete na rezultatu? Ni mi.
+  description: Rezultat je samo dio priče. Naši stručnjaci vam kroz primjere otkrivaju kako osobine funkcioniraju zajedno i kako se to ponašanje vidi u stvarnom radu. Otkrijte na što vrijedi obratiti pažnju, kod ovog profila, i kod svakog sljedećeg.
+profiles:
+  title: Vi birate profil. <span class="text-primary">JobMatch</span> pokazuje tko ga ispunjava.
+  description: Birajte između više od 145 profesionalnih profila i odmah vidite tko najbolje odgovara baš onome što tražite.
+
+advantages:
+  title: Zašto JobMatch?
+  subtitle: Nema čarobne formule za zapošljavanje, ali neki alati ipak znaju olakšati stvari.
+  items:
+    - title: Najtočniji prediktivni rezultat na tržištu
+      description: S prediktivnom valjanošću od 0,63, JobMatch Talent vam daje najtočniji uvid u to kako će kandidat raditi, i prije nego što ga zaposlite.
+    - title: Ocijenjen kao 87,3% točan.
+      description: Test koji zaista opisuje karakteristike na poslu i način rada – prema onima koji su ga sami ispunili.
+    - title: Uvid u osobnost na radnom mjestu
+      description: JobMatch test nije osmišljen za općenite opise osobnosti, već da predvidi ponašanje na poslu i pomogne vam odabrati, razviti i voditi ljude na temelju stvarnih rezultata.
+    - title: Vidi ispod površine
+      description: JobMatch kombinira 30 osobina u više od 600 profila i prikazuje nijanse u ponašanju koje čine razliku između dobrog kandidata i pravog kandidata.
 testimonials:
   title: Što kažu naši klijenti
   items:
@@ -66,4 +108,21 @@ form:
       placeholder: Unesite svoj email
     - title: Poruka
       placeholder: Unesite poruku
+  errors:
+    Ime: Ime je obavezno
+    Email: Email je obavezan
+    Poruka: Poruka je obavezna
+header:
+  links:
+    services: Usluge
+    interpretation: Interpretacija testa
+    advantages: Prednosti
+    testimonials: Iskustva
+    process: Proces
+    faq: FAQ
+footer:
+  copyright: Copyright © 2025
+  powered_by: Powered by
+  legal_notice: Legal notice
+  privacy_policy: Privacy policy
 ---

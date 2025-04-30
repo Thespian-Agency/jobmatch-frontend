@@ -4,11 +4,16 @@ import Header from "../components/Header.astro";
 import { Schema } from "astro-seo-schema";
 import { SEO } from "astro-seo";
 import { withBase } from "../utils/withBase";
+
+const PUBLIC_RECAPTCHA_SITE_KEY = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
+const scriptSrc = `https://www.google.com/recaptcha/api.js?render=${PUBLIC_RECAPTCHA_SITE_KEY}`;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
+    <script src={scriptSrc}></script>
+
     <meta name="robots" content="noindex, nofollow" />
 
     <Schema

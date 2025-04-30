@@ -1,13 +1,22 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import { withBase } from "../utils/withBase";
+import { getEntry } from "astro:content";
+
+const footer = (await getEntry(
+  "homepage",
+  "-index"
+)) as CollectionEntry<"homepage">;
+const { copyright, powered_by, legal_notice, privacy_policy } =
+  footer.data.footer;
 ---
 
 <footer
   class="flex gap-40 w-full justify-between pb-64 pt-36 border-t border-t-stroke-grey-primary"
 >
-  <p class="body-m text-body-grey font-regular">Copyright © 2025</p>
+  <p class="body-m text-body-grey font-regular">{copyright}</p>
   <div class="flex gap-8 items-center">
-    <p class="body-m text-body-grey font-regular">Powered by</p>
+    <p class="body-m text-body-grey font-regular">{powered_by}</p>
     <img
       src={withBase("/graphics/thespian.png")}
       alt="Powered by"
@@ -20,14 +29,14 @@ import { withBase } from "../utils/withBase";
       target="_blank"
       class="body-m text-body-grey font-medium"
     >
-      Legal notice
+      {legal_notice}
     </a>
     <a
       href="/privacy-policy"
       target="_blank"
       class="body-m text-body-grey font-medium"
     >
-      Privacy policy
+      {privacy_policy}
     </a>
   </div>
 </footer>

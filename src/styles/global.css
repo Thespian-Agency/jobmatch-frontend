@@ -9,6 +9,10 @@
 @import "./typography_external.css";
 @import "./variables_external.css";
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 @theme {
   --breakpoint-mobile: 384px;
   --breakpoint-tablet: 768px;

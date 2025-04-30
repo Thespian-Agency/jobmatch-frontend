@@ -2,7 +2,9 @@
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Section from "../layouts/Section.astro";
-import SelectionToolItem from "../layouts/SelectionToolItem.astro";
+import ServiceShowcase, {
+  type ServiceType,
+} from "../components/ServiceShowcase.astro";
 import "../styles/global.css";
 import ProfileIconsGraphic from "../react/ProfileIconsGraphic.tsx";
 import SelectionItems from "../react/SelectionItems.tsx";
@@ -19,7 +21,12 @@ const homepage = (await getEntry(
   "-index"
 )) as CollectionEntry<"homepage">;
 const {
-  selection_items,
+  buttons,
+  hero,
+  services,
+  results,
+  profiles,
+  advantages,
   testimonials,
   our_process,
   team_player,
@@ -33,23 +40,20 @@ const {
   <Section className="flex w-full justify-between">
     <div class="left-part py-80 max-w-[600px] w-1/2 flex flex-col gap-24">
       <div class="flex flex-col gap-24">
-        <h1 class="heading-2xl text-title-grey font-medium">
-          Kandidat zna što želite čuti. <span class="text-primary"
-            >JobMatch</span
-          > zna što trebate znati.
-        </h1>
+        <h1
+          set:html={hero.title}
+          class="heading-2xl text-title-grey font-medium"
+        />
         <p class="heading-xs font-light text-description-grey">
-          JobMatch vam pomaže procijeniti kandidate i zaposlenike brzo, precizno
-          i dokazano – od prijave, preko intervjua, do razvoja i zadržavanja
-          najboljih ljudi.
+          {hero.description}
         </p>
       </div>
       <div class="flex gap-24">
         <Button client:visible size="L" variant="primary"
-          >Kontaktirajte nas</Button
+          >{buttons["schedule_demo"]}</Button
         >
         <Button client:visible size="L" variant="secondary"
-          >Kontaktirajte nas</Button
+          >{buttons["contact_us"]}</Button
         >
       </div>
     </div>
@@ -60,81 +64,33 @@ const {
   <Section id="services" className="gap-80 flex flex-col" pt pb>
     <div class="top-part flex flex-col gap-40">
       <h2 class="heading-2xl font-light text-title-grey">
-        Alati za učinkovitiju selekciju
+        {services.title}
       </h2>
       <p class="body-xl font-light text-description-grey">
-        JobMatch daje uvid u ono što ne piše u životopisu i vodi vas cijelim
-        putem, od prijave do razvoja.
+        {services.subtitle}
       </p>
     </div>
     <div class="grid grid-cols-2 gap-44">
-      <SelectionToolItem
-        category="personality-test"
-        top={{
-          title: "Test osobnosti (JobMatch Talent)",
-          description: "Detaljan uvid u radnu osobnost zaposlenika",
-        }}
-        bottom={{
-          title: "Razvijen za predviđanje učinka",
-          description:
-            "Precizan psihometrijski test koji otkriva ponašanje zaposlenika na poslu, koliko odgovaraju poziciji i kako se uklapaju u vaš tim.",
-        }}
-      />
-      <SelectionToolItem
-        category="screening-test"
-        top={{
-          title: "Screening test (JobMatch Screen)",
-          description: "Automatski sortirajte brojne prijave",
-        }}
-        bottom={{
-          title: "Bolja selekcija uz minimalan utrošak vremena i resursa.",
-          description:
-            "Brzi, 10-minutni test za inicijalnu selekciju kandidata.",
-        }}
-      />
-      <SelectionToolItem
-        category="logic-test"
-        top={{
-          title: "Test logike i sposobnosti (JobMatch LogiQ)",
-          description:
-            "Testirajte kako kandidati razmišljaju, ne samo što znaju",
-        }}
-        bottom={{
-          title: "Znanstveno potvrđeni adaptivni testovi IQ-a i sposobnosti",
-          description:
-            "Pouzdan test logičkog zaključivanja, matematičkih vještina i sposobnosti rješavanja kompleksnih problema.",
-        }}
-      />
-      <SelectionToolItem
-        category="certification"
-        top={{
-          title: "Certifikacija (JobMatch Certificate)",
-          description: "Preuzmite selekciju u svoje ruke",
-        }}
-        bottom={{
-          title: "Bolji uvid u ljude znači sigurniji izbor za vaš tim.",
-          description:
-            "Ovladajte alatima koji vam pomažu razumjeti i birati najbolje kandidate.",
-        }}
-      />
+      {
+        Object.values(services.items).map((service, index) => (
+          <ServiceShowcase service={service} index={index + 1} />
+        ))
+      }
     </div>
   </Section>
   <Section id="interpretation" pt pb>
     <div class="left-part max-w-[600px] w-1/2 flex flex-col gap-24">
       <div class="flex flex-col gap-24">
         <h2 class="heading-2xl text-title-grey font-light">
-          Ne stajete na rezultatu? Ni mi.
+          {results.title}
         </h2>
         <p class="heading-xs font-light text-description-grey">
-          Rezultat je samo dio priče. Naši stručnjaci vam kroz primjere
-          otkrivaju kako osobine funkcioniraju zajedno i kako se to ponašanje
-          vidi u stvarnom radu. Otkrijte na što vrijedi obratiti pažnju, kod
-          ovog profila, i kod svakog sljedećeg.
+          {results.description}
         </p>
       </div>
       <div class="flex gap-24">
         <Button client:visible size="L" variant="primary"
-          >Ugovorite interpretaciju</Button
+          >{buttons["schedule_iterpretation"]}</Button
         >
       </div>
     </div>
@@ -149,22 +105,21 @@ const {
   <Section pt pb className="flex justify-center">
     <div class="flex flex-col gap-56 items-center">
       <div class="flex flex-col gap-24 max-w-[780px] items-center">
-        <h2 class="heading-2xl text-title-grey font-light text-center">
-          Vi birate profil. <span class="text-primary">JobMatch</span> pokazuje tko
-          ga ispunjava.
-        </h2>
+        <h2
+          set:html={profiles.title}
+          class="heading-2xl text-title-grey font-light text-center"
+        />
         <p
           class="body-xl font-light text-description-grey text-center max-w-[600px]"
         >
-          Birajte između više od 145 profesionalnih profila i odmah vidite tko
-          najbolje odgovara baš onome što tražite.
+          {profiles.description}
         </p>
         <div class="flex gap-24 justify-center">
           <Button client:visible size="L" variant="primary"
-            >Dogovorite demo</Button
+            >{buttons["schedule_demo"]}</Button
           >
           <Button client:visible size="L" variant="secondary"
-            >Kontaktirajte nas</Button
+            >{buttons["contact_us"]}</Button
           >
         </div>
       </div>
@@ -173,13 +128,14 @@ const {
   </Section>
   <Section id="advantages" pt pb className="flex flex-col gap-80">
     <div class="flex flex-col gap-40">
-      <h2 class="heading-2xl text-title-grey font-light">Zašto JobMatch?</h2>
+      <h2 class="heading-2xl text-title-grey font-light">
+        {advantages.title}
+      </h2>
       <p class="body-xl font-light text-description-grey max-w-[600px]">
-        Nema čarobne formule za zapošljavanje, ali neki alati ipak znaju
-        olakšati stvari.
+        {advantages.subtitle}
       </p>
     </div>
-    <SelectionItems client:idle selection_items={selection_items} />
+    <SelectionItems client:idle items={advantages.items} />
   </Section>
   <Section id="testimonials" pt pb>
     <TestimonialSlider client:idle testimonials={testimonials} />
@@ -231,10 +187,10 @@ const {
         </div>
         <div class="flex gap-24">
           <Button client:visible size="L" variant="primary"
-            >Isprobajte JobMatch besplatno</Button
+            >{buttons["try_for_free"]}</Button
           >
           <Button client:visible size="L" variant="secondary"
-            >Kontaktirajte nas</Button
+            >{buttons["contact_us"]}</Button
           >
         </div>
       </div>
@@ -282,6 +238,6 @@ const {
         {form.title}
       </h2>
     </div>
-    <ContactForm client:idle fields={form.fields} />
+    <ContactForm client:only="react" form={form} />
   </Section>
 </Layout>

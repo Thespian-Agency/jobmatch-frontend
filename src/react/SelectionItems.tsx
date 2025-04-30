@@ -3,18 +3,18 @@ import classNames from "classnames";
 import { useState } from "react";
 import { withBase } from "../utils/withBase";
 
-type Items = CollectionEntry<"homepage">["data"]["selection_items"];
+type Items = CollectionEntry<"homepage">["data"]["advantages"]["items"];
 
 interface Props {
-  selection_items: Items;
+  items: Items;
 }
 
-export default function SelectionItems({ selection_items }: Props) {
+export default function SelectionItems({ items }: Props) {
   const [selectedItem, setSelectedItem] = useState<number>(0);
   return (
     <div className="w-full flex items-start">
       <div className="flex flex-col gap-12 w-1/2 pr-44">
-        {selection_items.map((item, index) => (
+        {items.map((item, index) => (
           <div
             onClick={() => setSelectedItem(index)}
             key={index}
@@ -54,7 +54,7 @@ export default function SelectionItems({ selection_items }: Props) {
       </div>
       <img
         src={withBase(`/images/selection-${selectedItem + 1}.webp`)}
-        alt={selection_items[selectedItem].title}
+        alt={items[selectedItem].title}
         width={500}
         height={500}
         className="h-full w-1/2 flex items-center justify-center object-cover"

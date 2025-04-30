@@ -2,33 +2,14 @@
 import { Image } from "astro:assets";
 import Button from "../react/Button";
 import { withBase } from "../utils/withBase";
+import { getEntry, type CollectionEntry } from "astro:content";
 
-const links = [
-  {
-    label: "Usluge",
-    id: "services",
-  },
-  {
-    label: "Interpretacija testa",
-    id: "interpretation",
-  },
-  {
-    label: "Prednosti",
-    id: "advantages",
-  },
-  {
-    label: "Iskustva",
-    id: "testimonials",
-  },
-  {
-    label: "Proces",
-    id: "process",
-  },
-  {
-    label: "FAQ",
-    id: "faq",
-  },
-];
+const header = (await getEntry(
+  "homepage",
+  "-index"
+)) as CollectionEntry<"homepage">;
+const { links: headerLinks } = header.data.header;
+const { buttons } = header.data;
 ---
 
 <header
@@ -43,13 +24,20 @@ const links = [
     <nav>
       <ul class="flex gap-24">
         {
-          links.map((link) => (
+          [
+            "services",
+            "interpretation",
+            "advantages",
+            "testimonials",
+            "process",
+            "faq",
+          ].map((link) => (
             <li>
               <a
                 class="body-m cursor-pointer font-regular text-fg-grey-tertiary"
-                data-id={link.id}
+                data-id={link}
               >
-                {link.label}
+                {headerLinks[link]}
               </a>
             </li>
           ))
@@ -58,8 +46,8 @@ const links = [
     </nav>
   </div>
   <div class="right-part flex gap-12">
-    <Button client:visible variant="primary"> Dogovorite demo </Button>
-    <Button client:visible variant="secondary"> Kontaktirajte nas </Button>
+    <Button client:visible variant="primary">{buttons["schedule_demo"]}</Button>
+    <Button client:visible variant="secondary">{buttons["contact_us"]}</Button>
   </div>
 </header>
 <script>

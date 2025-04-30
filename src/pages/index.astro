@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import Button from "../components/Button.astro";
 import Layout from "../layouts/Layout.astro";
 import Section from "../layouts/Section.astro";
 import SelectionToolItem from "../layouts/SelectionToolItem.astro";
@@ -9,7 +8,10 @@ import ProfileIconsGraphic from "../react/ProfileIconsGraphic.tsx";
 import SelectionItems from "../react/SelectionItems.tsx";
 import { getEntry, type CollectionEntry } from "astro:content";
 import TestimonialSlider from "../react/TestimonialSlider.tsx";
-import { getEntries } from "astro:content";
+import FAQ from "../react/FAQ.tsx";
+import ContactForm from "../react/ContactForm.tsx";
+import HeroCarousel from "../react/HeroCarousel.tsx";
+import Button from "../react/Button";
 
 const homepage = (await getEntry(
   "homepage",
@@ -22,12 +24,13 @@ const {
   team_player,
   for_who,
   faq,
+  form,
 } = homepage.data;
 ---
 
 <Layout>
-  <Section pt pb>
-    <div class="left-part max-w-[600px] w-1/2 flex flex-col gap-24">
+  <Section className="flex w-full justify-between">
+    <div class="left-part py-80 max-w-[600px] w-1/2 flex flex-col gap-24">
       <div class="flex flex-col gap-24">
         <h1 class="heading-2xl text-title-grey font-medium">
           Kandidat zna što želite čuti. <span class="text-primary"
@@ -41,15 +44,19 @@ const {
         </p>
       </div>
       <div class="flex gap-24">
-        <Button size="L" variant="primary">Kontaktirajte nas</Button>
-        <Button size="L" variant="secondary">Kontaktirajte nas</Button>
+        <Button client:visible size="L" variant="primary"
+          >Kontaktirajte nas</Button
+        >
+        <Button client:visible size="L" variant="secondary"
+          >Kontaktirajte nas</Button
+        >
       </div>
     </div>
     <div class="right-part w-1/2 flex items-center justify-center">
-      <h1>Hello World</h1>
+      <HeroCarousel client:visible />
     </div>
   </Section>
-  <Section className="gap-80 flex flex-col" pt pb>
+  <Section id="services" className="gap-80 flex flex-col" pt pb>
     <div class="top-part flex flex-col gap-40">
       <h2 class="heading-2xl font-light text-title-grey">
         Alati za učinkovitiju selekciju
@@ -111,7 +118,7 @@ const {
       />
     </div>
   </Section>
-  <Section pt pb>
+  <Section id="interpretation" pt pb>
     <div class="left-part max-w-[600px] w-1/2 flex flex-col gap-24">
       <div class="flex flex-col gap-24">
         <h2 class="heading-2xl text-title-grey font-light">
@@ -125,7 +132,9 @@ const {
         </p>
       </div>
       <div class="flex gap-24">
-        <Button size="L" variant="primary">Ugovorite interpretaciju</Button>
+        <Button client:visible size="L" variant="primary"
+          >Ugovorite interpretaciju</Button
+        >
       </div>
     </div>
     <Image
@@ -150,14 +159,18 @@ const {
           najbolje odgovara baš onome što tražite.
         </p>
         <div class="flex gap-24 justify-center">
-          <Button size="L" variant="primary">Dogovorite demo</Button>
-          <Button size="L" variant="secondary">Kontaktirajte nas</Button>
+          <Button client:visible size="L" variant="primary"
+            >Dogovorite demo</Button
+          >
+          <Button client:visible size="L" variant="secondary"
+            >Kontaktirajte nas</Button
+          >
         </div>
       </div>
       <ProfileIconsGraphic client:visible />
     </div>
   </Section>
-  <Section pt pb className="flex flex-col gap-80">
+  <Section id="advantages" pt pb className="flex flex-col gap-80">
     <div class="flex flex-col gap-40">
       <h2 class="heading-2xl text-title-grey font-light">Zašto JobMatch?</h2>
       <p class="body-xl font-light text-description-grey max-w-[600px]">
@@ -167,10 +180,10 @@ const {
     </div>
     <SelectionItems client:idle selection_items={selection_items} />
   </Section>
-  <Section pt pb>
+  <Section id="testimonials" pt pb>
     <TestimonialSlider client:idle testimonials={testimonials} />
   </Section>
-  <Section pt pb className="flex flex-col gap-80">
+  <Section id="process" pt pb className="flex flex-col gap-80">
     <h2 class="heading-2xl text-title-grey font-light">
       {our_process.title}
     </h2>
@@ -216,12 +229,58 @@ const {
           </p>
         </div>
         <div class="flex gap-24">
-          <Button size="L" variant="primary"
+          <Button client:visible size="L" variant="primary"
             >Isprobajte JobMatch besplatno</Button
           >
-          <Button size="L" variant="secondary">Kontaktirajte nas</Button>
+          <Button client:visible size="L" variant="secondary"
+            >Kontaktirajte nas</Button
+          >
         </div>
       </div>
     </div>
+  </Section>
+  <Section pt pb className="flex flex-col gap-80">
+    <h2
+      class="heading-2xl text-title-grey font-light"
+      class:list={["max-w-[600px]"]}
+    >
+      {for_who.title}
+    </h2>
+    <div class="grid grid-cols-4 gap-0">
+      {
+        for_who.items.map((item, index) => (
+          <div
+            class:list={[
+              "flex flex-col gap-24 px-24 first:pl-0 last:pr-0 py-16",
+              {
+                "border-r border-r-stroke-grey-primary":
+                  index !== for_who.items.length - 1,
+              },
+            ]}
+          >
+            <h3 class="heading-xs text-title-grey font-medium">{item.title}</h3>
+            <p class="body-l font-light text-description-grey">
+              {item.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </Section>
+  <Section id="faq" pt pb className="flex flex-col gap-80">
+    <div class="flex flex-col gap-40">
+      <h2 class="heading-2xl text-title-grey font-light">
+        {faq.title}
+      </h2>
+    </div>
+    <FAQ client:idle items={faq.items} />
+  </Section>
+  <Section id="contact" pt pb className="flex w-full justify-between gap-80">
+    <div class="max-w-[400px]">
+      <h2 class="heading-2xl text-title-grey font-semibold">
+        {form.title}
+      </h2>
+    </div>
+    <ContactForm client:idle fields={form.fields} />
   </Section>
 </Layout>

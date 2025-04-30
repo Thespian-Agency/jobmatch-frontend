@@ -1,25 +1,24 @@
 ---
-
 interface Props {
   className?: string;
-	pt?: boolean;
-	pb?: boolean;
+  pt?: boolean;
+  pb?: boolean;
+  id?: string;
 }
 
-const {
-  className,
-	pt = false,
-	pb = false,
-} = Astro.props;
+const { className, pt = false, pb = false, id } = Astro.props;
 ---
 
-<section class:list={[
-	"flex container relative border border-red-500",
-	className,
-	{
-		"pt-128": pt,
-		"pb-128": pb,
-	}
-]}>
-		<slot />
+<section
+  class:list={[
+    "flex container relative  ",
+    className,
+    {
+      "pt-128": pt,
+      "pb-128": pb,
+    },
+  ]}
+  id={id}
+>
+  <slot />
 </section>

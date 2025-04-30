@@ -20,7 +20,7 @@ export default function SelectionItems({ selection_items }: Props) {
             className={classNames(
               "bg-[#F7F7F7] cursor-pointer rounded-24 py-20 px-24 overflow-hidden transition-all duration-600 h-full ease-in-out hover:bg-[#F7F7F7]",
               {
-                "max-h-[calc(56px+var(--spacing-40))] opacity-55 bg-transparent":
+                "max-h-[calc(56px+var(--spacing-20)+var(--spacing-20))] opacity-55 bg-transparent":
                   selectedItem !== index,
                 "max-h-[300px]": selectedItem === index,
               }

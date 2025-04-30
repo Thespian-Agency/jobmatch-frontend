@@ -1,61 +1,86 @@
 ---
-import { Image } from 'astro:assets';
-import Button from './Button.astro';
+import { Image } from "astro:assets";
+import Button from "../react/Button";
 
 const links = [
-	{
-		label: "Usluge",
-		id: "usluge",
-	},
-	{
-		label: "Interpretacija testa",
-		id: "interpretacija",
-	},
-	{
-		label: "Prednosti",
-		id: "prednosti",
-	},
-	{
-		label: "Iskustva",
-		id: "iskustva",
-	},
-	{
-		label: "Proces",
-		id: "proces",
-	},
-	{
-		label: "FAQ",
-		id: "faq",
-	},
+  {
+    label: "Usluge",
+    id: "services",
+  },
+  {
+    label: "Interpretacija testa",
+    id: "interpretation",
+  },
+  {
+    label: "Prednosti",
+    id: "advantages",
+  },
+  {
+    label: "Iskustva",
+    id: "testimonials",
+  },
+  {
+    label: "Proces",
+    id: "process",
+  },
+  {
+    label: "FAQ",
+    id: "faq",
+  },
 ];
 ---
 
-<header class="flex h-72 px-56 py-16 justify-between items-center sticky top-0 backdrop-blur-xl z-10">
-	<div class="left-part flex gap-32 items-center">
-		<div class="px-24 py-2">
-			<Image src="/logo.png" alt="logo" width={181} height={36}   />
-		</div>
-		<nav>
-			<ul class="flex gap-24">
-				{links.map((link) => (
-					<li>
-						<a class="body-m  font-regular text-fg-grey-tertiary" href={`#${link.id}`}>{link.label}</a>
-					</li>
-				))}
-			</ul>
-		</nav>
-	</div>
-	<div class="right-part flex gap-12">
-		<Button variant="primary">Dogovorite demo</Button>
-		<Button variant="secondary">Kontaktirajte nas</Button>
-	</div>
+<header
+  class="flex h-72 px-56 py-16 justify-between items-center sticky top-0 backdrop-blur-xl z-10"
+>
+  <div class="left-part flex gap-32 items-center">
+    <div class="px-24 py-2">
+      <a data-id="home" class="cursor-pointer">
+        <Image src="/logo.png" alt="logo" width={181} height={36} />
+      </a>
+    </div>
+    <nav>
+      <ul class="flex gap-24">
+        {
+          links.map((link) => (
+            <li>
+              <a
+                class="body-m cursor-pointer font-regular text-fg-grey-tertiary"
+                data-id={link.id}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+  <div class="right-part flex gap-12">
+    <Button client:visible variant="primary"> Dogovorite demo </Button>
+    <Button client:visible variant="secondary"> Kontaktirajte nas </Button>
+  </div>
 </header>
-
+<script>
+  const links = document.querySelectorAll("a");
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const href = link.getAttribute("data-id");
+      if (href === "home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        const element = document.querySelector(`#${href}`);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+  });
+</script>
 <style>
-	/* Add smooth scrolling behavior to the entire page */
-	:global(html) {
-		scroll-behavior: smooth;
-	}
+  /* Add smooth scrolling behavior to the entire page */
+  :global(html) {
+    scroll-behavior: smooth;
+  }
 </style>
-
-

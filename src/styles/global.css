@@ -272,6 +272,7 @@
 
   /* Spacing */
   --spacing-0: 0px;
+  --spacing: 1px;
   --spacing-2: var(--p-responsive-2);
   --spacing-4: var(--p-responsive-4);
   --spacing-6: var(--p-responsive-6);
@@ -300,6 +301,7 @@
 
   /* Container */
   --container-0: 0px;
+  --container: 1px;
   --container-2: var(--g-responsive-2);
   --container-4: var(--g-responsive-4);
   --container-6: var(--g-responsive-6);
@@ -430,5 +432,18 @@
 
   .heading-3xl {
     @apply text-48 tablet:text-64 desktop:text-80;
+  }
+}
+
+.hero-carousel-line-active {
+  animation: hero-carousel-line-active 3s ease-in-out forwards;
+}
+
+@keyframes hero-carousel-line-active {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }

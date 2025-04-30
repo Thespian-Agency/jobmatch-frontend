@@ -5,7 +5,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Button from "../components/Button.astro";
 
 type Props = {
   testimonials: CollectionEntry<"homepage">["data"]["testimonials"];

@@ -57,4 +57,13 @@ faq:
       description: missing text
     - title: Postoji li način da dobijem dublje tumačenje rezultata?
       description: missing text
+form:
+  title: Isprobajte JobMatch besplatno
+  fields:
+    - title: Ime
+      placeholder: Unesite svoje ime
+    - title: Email
+      placeholder: Unesite svoj email
+    - title: Poruka
+      placeholder: Unesite poruku
 ---

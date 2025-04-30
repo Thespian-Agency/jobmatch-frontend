@@ -57,6 +57,15 @@ const homepageCollection = defineCollection({
         })
       ),
     }),
+    form: z.object({
+      title: z.string(),
+      fields: z.array(
+        z.object({
+          title: z.string(),
+          placeholder: z.string(),
+        })
+      ),
+    }),
     // banner: z.object({
     //   title: z.string(),
     //   content: z.string().optional(),

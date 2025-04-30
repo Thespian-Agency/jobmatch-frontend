@@ -1,5 +1,5 @@
 ---
-
+import { withBase } from "../utils/withBase";
 ---
 
 <footer
@@ -8,7 +8,11 @@
   <p class="body-m text-body-grey font-regular">Copyright © 2025</p>
   <div class="flex gap-8 items-center">
     <p class="body-m text-body-grey font-regular">Powered by</p>
-    <img src="/graphics/thespian.png" alt="Powered by" class="w-112 h-24" />
+    <img
+      src={withBase("/graphics/thespian.png")}
+      alt="Powered by"
+      class="w-112 h-24"
+    />
   </div>
   <div class="flex gap-32 items-center">
     <a

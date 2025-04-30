@@ -1,6 +1,7 @@
 import type { CollectionEntry } from "astro:content";
 import classNames from "classnames";
 import { useState } from "react";
+import { withBase } from "../utils/withBase";
 
 type Items = CollectionEntry<"homepage">["data"]["faq"]["items"];
 
@@ -36,7 +37,7 @@ export default function FAQ({ items }: Props) {
             </h3>
             <button className="flex items-center justify-center size-56 bg-white rounded-12">
               <img
-                src="/icons/x.svg"
+                src={withBase("/icons/x.svg")}
                 alt="Chevron down"
                 className={classNames(
                   "size-40 transition-all duration-600 ease-in-out",

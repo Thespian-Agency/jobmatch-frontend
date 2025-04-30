@@ -12,6 +12,7 @@ import FAQ from "../react/FAQ.tsx";
 import ContactForm from "../react/ContactForm.tsx";
 import HeroCarousel from "../react/HeroCarousel.tsx";
 import Button from "../react/Button";
+import { withBase } from "../utils/withBase";
 
 const homepage = (await getEntry(
   "homepage",
@@ -139,7 +140,7 @@ const {
     </div>
     <Image
       class="absolute right-0 top-0 w-[50%] h-full rounded-l-32 object-cover"
-      src="/images/results.webp"
+      src={withBase("/images/results.webp")}
       alt="JobMatch result"
       width={500}
       height={500}
@@ -192,7 +193,7 @@ const {
         our_process.items.map((item, index) => (
           <div class="flex flex-col w-full gap-24 bg-[#F7F7F7] p-24 rounded-32">
             <Image
-              src={`/icons/process-${index + 1}.png`}
+              src={withBase(`/icons/process-${index + 1}.png`)}
               alt="JobMatch process"
               width={56}
               height={56}
@@ -209,7 +210,7 @@ const {
   <Section pt pb className="">
     <div class="relative w-full flex items-end justify-end aspect-[2/1]">
       <Image
-        src="/images/team-player.webp"
+        src={withBase("/images/team-player.webp")}
         alt="JobMatch team player"
         width={500}
         height={500}

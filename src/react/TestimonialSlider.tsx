@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { withBase } from "../utils/withBase";
 
 type Props = {
   testimonials: CollectionEntry<"homepage">["data"]["testimonials"];
@@ -34,13 +35,13 @@ const TestimonialSlider = ({ testimonials }: Props) => {
             onClick={handleClickLeft}
             className="flex size-64 items-center cursor-pointer justify-center rounded-full bg-[#F3F3F3]"
           >
-            <img src="/icons/arrow_left.svg" alt="" />
+            <img src={withBase("/icons/arrow_left.svg")} alt="" />
           </div>
           <div
             onClick={handleClickRight}
             className="flex size-64 items-center cursor-pointer justify-center rounded-full bg-primary"
           >
-            <img src="/icons/arrow_right.svg" alt="" />
+            <img src={withBase("/icons/arrow_right.svg")} alt="" />
           </div>
         </div>
       </div>
@@ -92,7 +93,7 @@ const TestimonialSlider = ({ testimonials }: Props) => {
             <div className={`author gap-12 flex items-center justify-center`}>
               <img
                 className="size-64 rounded-full"
-                src={`/images/profile-${(i % 3) + 1}.webp`}
+                src={withBase(`/images/profile-${(i % 3) + 1}.webp`)}
                 alt=""
               />
               <div className="flex flex-col">

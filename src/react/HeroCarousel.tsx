@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import { useEffect, useRef, useState } from "react";
+import { withBase } from "../utils/withBase";
 
 type LineProps = {
   active: boolean;
@@ -40,7 +41,7 @@ export default function HeroCarousel() {
   return (
     <div className="relative flex justify-end items-center flex-col gap-40 w-full h-full">
       <img
-        src={`/images/hero-${currentIndex}.png`}
+        src={withBase(`/images/hero-${currentIndex}.png`)}
         alt="Hero carousel"
         className=" w-full object-cover"
       />

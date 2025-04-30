@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Button from "../react/Button";
+import { withBase } from "../utils/withBase";
 
 const links = [
   {
@@ -36,7 +37,7 @@ const links = [
   <div class="left-part flex gap-32 items-center">
     <div class="px-24 py-2">
       <a data-id="home" class="cursor-pointer">
-        <Image src="/logo.png" alt="logo" width={181} height={36} />
+        <Image src={withBase("/logo.png")} alt="logo" width={181} height={36} />
       </a>
     </div>
     <nav>

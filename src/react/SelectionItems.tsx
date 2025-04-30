@@ -1,6 +1,7 @@
 import type { CollectionEntry } from "astro:content";
 import classNames from "classnames";
 import { useState } from "react";
+import { withBase } from "../utils/withBase";
 
 type Items = CollectionEntry<"homepage">["data"]["selection_items"];
 
@@ -28,7 +29,7 @@ export default function SelectionItems({ selection_items }: Props) {
           >
             <div className="flex items-center gap-10">
               <img
-                src={`/icons/selection-${index + 1}.png`}
+                src={withBase(`/icons/selection-${index + 1}.png`)}
                 alt={item.title}
                 width={56}
                 height={56}
@@ -52,7 +53,7 @@ export default function SelectionItems({ selection_items }: Props) {
         ))}
       </div>
       <img
-        src={`/images/selection-${selectedItem + 1}.webp`}
+        src={withBase(`/images/selection-${selectedItem + 1}.webp`)}
         alt={selection_items[selectedItem].title}
         width={500}
         height={500}

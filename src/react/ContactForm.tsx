@@ -78,8 +78,6 @@ export default function ContactForm({ form }: Props) {
       grecaptcha
         .execute(PUBLIC_RECAPTCHA_SITE_KEY, { action: "submit" })
         .then(async function (token: string) {
-          console.log(token);
-
           const backendUrl = `${
             import.meta.env.PUBLIC_FORM_BACKEND_URL ||
             "https://staging.thespian.eu"
@@ -100,7 +98,7 @@ export default function ContactForm({ form }: Props) {
                   phone: "-",
                   subject: "JOBMATCH - Kontakt",
                 },
-                token: "123",
+                token,
               }),
             });
             if (!response.ok) {
@@ -108,7 +106,6 @@ export default function ContactForm({ form }: Props) {
             }
 
             const json = await response.json();
-            console.log(json);
             if (json.message === "success") {
               setMessageSent({
                 isSent: true,

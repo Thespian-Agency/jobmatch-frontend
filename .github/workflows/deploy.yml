@@ -16,6 +16,9 @@ permissions:
 
 jobs:
   build:
+    env:
+      PUBLIC_FORM_BACKEND_URL: ${{ secrets.PUBLIC_FORM_BACKEND_URL }}
+      PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.PUBLIC_RECAPTCHA_SITE_KEY }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git

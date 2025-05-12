@@ -63,6 +63,11 @@ testimonials:
       author:
         name: Jan Olofsson
         position: Voditelj administracije, Općina Vindeln
+    - title: Preciznost JobMatch Talent testa pomogla mi je da budem usmjerenija i učinkovitija.
+      description: Preciznost JobMatch Talent testa pomogla mi je da budem usmjerenija i učinkovitija nego ikad prije, kako u karijernom savjetovanju, tako i u razvoju timova.
+      author:
+        name: Adela Carlsson
+        position: POW Zoulution Sweden
 our_process:
   title: Naš proces
   items:
@@ -92,13 +97,13 @@ faq:
     - title: Koliko je valjan JobMatch test?
       description: JobMatch je test s najvećom prediktivnom valjanošću na svijetu (0.63), što znači da daje najprecizniji uvid u učinak zaposlenika i njihovu uspješnost na poslu. Certificiran je od strane DNV prema EFPA standardima, odnosno, zadovoljava stroge kriterije psihometrijske kvalitete, uključujući pouzdanost, valjanost i etičku upotrebu.
     - title: Je li test samo za selekciju novih zaposlenika?
-      description: asd
+      description: Ne. Iako se često koristi u selekciji, JobMatch je jednako učinkovit za razvoj zaposlenika, timsku dinamiku, coaching, reorganizaciju i procjenu potencijala zaposlenika za ulogu voditelja.
     - title: Je li potrebno dodatno školovanje za korištenje alata?
-      description: missing text
+      description: Osnovno korištenje ne zahtijeva edukaciju. No, postoji i mogućnost certifikacije ako želite dublje razumjeti psihometrijsku podlogu i koristiti sve napredne funkcije samostalno.
     - title: Koliko brzo dobivam rezultate?
-      description: missing text
+      description: Rezultati su dostupni odmah nakon što kandidat završi test. Dobivate jasan izvještaj s preporukama i automatskim ocjenama podudarnosti s traženim profilom.
     - title: Postoji li način da dobijem dublje tumačenje rezultata?
-      description: missing text
+      description: Naravno! Naši JobMatch stručnjaci nude live interpretacije koje pomažu da sve informacije stavite u konkretan, poslovno koristan kontekst. Dogovorite razgovor ovdje.
 form:
   title: Isprobajte JobMatch besplatno
   fields:

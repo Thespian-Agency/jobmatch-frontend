@@ -17,7 +17,7 @@
   --breakpoint-mobile: 384px;
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1024px;
-  --breakpoint-xldesktop: 1600px;
+  --breakpoint-xldesktop: 1400px;
 
   --shadow-2xs: 0 1px rgb(0 0 0 / 0.05);
   --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -380,6 +380,7 @@
   --font-weight-bold: var(--weight-bold);
 
   /* Border radius */
+  --radius-0: var(--rounded-0);
   --radius-6: var(--rounded-6);
   --radius-8: var(--rounded-8);
   --radius-10: var(--rounded-10);

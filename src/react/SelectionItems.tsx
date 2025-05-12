@@ -12,8 +12,8 @@ interface Props {
 export default function SelectionItems({ items }: Props) {
   const [selectedItem, setSelectedItem] = useState<number>(0);
   return (
-    <div className="w-full flex items-start">
-      <div className="flex flex-col gap-12 w-1/2 pr-44">
+    <div className="w-full flex items-start desktop:flex-row flex-col gap-40">
+      <div className="flex flex-col gap-12 w-full desktop:w-1/2 desktop:pr-44">
         {items.map((item, index) => (
           <div
             onClick={() => setSelectedItem(index)}
@@ -57,7 +57,7 @@ export default function SelectionItems({ items }: Props) {
         alt={items[selectedItem].title}
         width={500}
         height={500}
-        className="h-full w-1/2 flex items-center justify-center object-cover"
+        className="h-full w-full desktop:w-1/2 flex items-center justify-center object-cover"
       />
     </div>
   );

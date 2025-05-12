@@ -150,7 +150,7 @@ export default function ContactForm({ form }: Props) {
           )}
         </div>
       )}
-      <div className="flex   gap-24">
+      <div className="flex desktop:flex-row flex-col gap-24 w-full">
         <Field field={form.fields[0]} errors={errors?.Ime} />
         <Field field={form.fields[1]} errors={errors?.Email} />
       </div>
@@ -159,7 +159,7 @@ export default function ContactForm({ form }: Props) {
       <div className="flex items-end gap-24">
         <button
           type="submit"
-          className=" p-16 cursor-pointer rounded-32 bg-primary text-white body-m font-medium"
+          className="desktop:w-auto w-full p-16 cursor-pointer rounded-32 bg-primary text-white body-m font-medium"
         >
           Kontaktirajte nas
         </button>

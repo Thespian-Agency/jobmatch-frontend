@@ -11,8 +11,7 @@ const { className, pt = false, pb = false, id } = Astro.props;
 
 <section
   class:list={[
-    "flex container relative  ",
-    className,
+    "flex relative tablet:px-80 px-16 w-full justify-center",
     {
       "pt-128": pt,
       "pb-128": pb,
@@ -20,5 +19,7 @@ const { className, pt = false, pb = false, id } = Astro.props;
   ]}
   id={id}
 >
-  <slot />
+  <div class:list={["flex container w-full", className]}>
+    <slot />
+  </div>
 </section>

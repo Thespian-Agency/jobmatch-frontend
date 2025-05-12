@@ -12,27 +12,29 @@ const { copyright, powered_by, legal_notice, privacy_policy } =
 ---
 
 <footer
-  class="flex gap-40 w-full justify-between pb-64 pt-36 border-t border-t-stroke-grey-primary"
+  class="flex gap-40 w-full container justify-between px-16 pb-64 pt-36 border-t border-t-stroke-grey-primary desktop:flex-row flex-col"
 >
   <p class="body-m text-body-grey font-regular">{copyright}</p>
   <div class="flex gap-8 items-center">
     <p class="body-m text-body-grey font-regular">{powered_by}</p>
-    <img
-      src={withBase("/graphics/thespian.png")}
-      alt="Powered by"
-      class="w-112 h-24"
-    />
+    <a href="https://thespian.eu/" target="_blank">
+      <img
+        src={withBase("/graphics/thespian.png")}
+        alt="Powered by"
+        class="w-112 h-24"
+      />
+    </a>
   </div>
   <div class="flex gap-32 items-center">
     <a
-      href="/legal-notice"
+      href="https://www.jobmatchtalent.com/about-us/personal-data-agreement/data-processing-agreement/"
       target="_blank"
       class="body-m text-body-grey font-medium"
     >
       {legal_notice}
     </a>
     <a
-      href="/privacy-policy"
+      href="https://www.jobmatchtalent.com/about-us/personal-data-agreement/privacy-policy/"
       target="_blank"
       class="body-m text-body-grey font-medium"
     >

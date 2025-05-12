@@ -1,12 +1,20 @@
 ---
 import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import Header from "../react/Header";
 import { Schema } from "astro-seo-schema";
 import { SEO } from "astro-seo";
 import { withBase } from "../utils/withBase";
+import { getEntry } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 
 const PUBLIC_RECAPTCHA_SITE_KEY = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
 const scriptSrc = `https://www.google.com/recaptcha/api.js?render=${PUBLIC_RECAPTCHA_SITE_KEY}`;
+const header = (await getEntry(
+  "homepage",
+  "-index"
+)) as CollectionEntry<"homepage">;
+const { links } = header.data.header;
+const { buttons } = header.data;
 ---
 
 <!doctype html>
@@ -57,8 +65,8 @@ const scriptSrc = `https://www.google.com/recaptcha/api.js?render=${PUBLIC_RECAP
     <meta name="generator" content={Astro.generator} />
   </head>
   <body class="relative h-auto">
-    <Header />
-    <main class="flex flex-col px-80 max-w-[1440px] mx-auto">
+    <Header client:visible links={links} buttons={buttons} />
+    <main class="flex flex-col mx-auto items-center">
       <slot />
       <Footer />
     </main>

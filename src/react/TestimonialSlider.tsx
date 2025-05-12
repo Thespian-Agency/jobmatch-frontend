@@ -26,11 +26,11 @@ const TestimonialSlider = ({ testimonials }: Props) => {
 
   return (
     <div className="reviews-carousel relative w-screen overflow-x-hidden">
-      <div className="flex gap-24 justify-between items-center pb-80 ">
+      <div className="flex gap-24 justify-between items-center pb-80 desktop:flex-row flex-col">
         <p className="heading-2xl font-light text-description-grey">
           {testimonials.title}
         </p>
-        <div className="flex gap-24">
+        <div className="flex gap-24 justify-end w-full desktop:w-auto">
           <div
             onClick={handleClickLeft}
             className="flex size-64 items-center cursor-pointer justify-center rounded-full bg-[#F3F3F3]"

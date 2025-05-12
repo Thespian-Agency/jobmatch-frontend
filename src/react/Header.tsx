@@ -28,15 +28,14 @@ export default function Header({ links, buttons }: Props) {
       <header className="flex h-72  px-56 py-16 justify-between items-center sticky top-0 backdrop-blur-xl z-50">
         <div className="left-part flex gap-32 items-center">
           <div className="px-24 py-2">
-            <a data-id="home" className="cursor-pointer">
-              <img
-                src={withBase("/logo.png")}
-                alt="logo"
-                onClick={(e) => handleClick(e, "home")}
-                width={181}
-                height={36}
-              />
-            </a>
+            <img
+              className="cursor-pointer"
+              src={withBase("/logo.png")}
+              alt="logo"
+              onClick={(e) => handleClick(e, "home")}
+              width={181}
+              height={36}
+            />
           </div>
           <nav className="hidden xldesktop:block">
             <ul className="flex gap-24">

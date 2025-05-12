@@ -39,11 +39,11 @@ export default function HeroCarousel() {
   }, [handleNext]);
 
   return (
-    <div className="desktop:absolute relative top-0 right-0 flex justify-end desktop:w-2/5 w-full items-center flex-col gap-40 h-full">
+    <div className="desktop:absolute xldesktop:-translate-x-80 relative top-0 right-0 flex justify-end desktop:w-2/5 w-full items-center flex-col gap-40 h-full">
       <img
-        src={withBase(`/images/hero-${currentIndex}.png`)}
+        src={withBase(`/images/hero-${currentIndex}.webp`)}
         alt="Hero carousel"
-        className=" w-full h-full  object-cover desktop:rounded-l-32 desktop:rounded-r-0 rounded-t-32 rounded-b-0"
+        className=" w-full h-full object-cover desktop:rounded-l-32 xldesktop:rounded-r-32 desktop:rounded-r-0 rounded-t-32 rounded-b-0"
       />
       <div className="flex gap-24 w-full z-10 absolute bottom-40 left-0  justify-center">
         {[1, 2, 3].map((item) => (

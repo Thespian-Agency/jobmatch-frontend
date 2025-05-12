@@ -55,9 +55,10 @@ export default function SelectionItems({ items }: Props) {
       <img
         src={withBase(`/images/selection-${selectedItem + 1}.webp`)}
         alt={items[selectedItem].title}
+        loading="lazy"
         width={500}
         height={500}
-        className="h-full w-full desktop:w-1/2 flex items-center justify-center object-cover"
+        className=" desktop:absolute xldesktop:-translate-x-80 relative desktop:w-2/5 w-full right-0 object-cover desktop:rounded-l-32 xldesktop:rounded-r-32 desktop:rounded-r-0 rounded-t-32 rounded-b-0  flex items-center justify-center "
       />
     </div>
   );

@@ -20,9 +20,8 @@ const { buttons } = header.data;
 <!doctype html>
 <html lang="en">
   <head>
-    <script src={scriptSrc}></script>
-
-    <meta name="robots" content="noindex, nofollow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
 
     <Schema
       item={{
@@ -45,11 +44,12 @@ const { buttons } = header.data;
       }}
     />
     <SEO
-      title="JobMatch"
+      title="JobMatch - Procijenite kandidate i zaposlenike brzo, precizno i dokazano"
       description="JobMatch vam pomaže procijeniti kandidate i zaposlenike brzo, precizno i dokazano"
       openGraph={{
         basic: {
-          title: "JobMatch",
+          title:
+            "JobMatch - Procijenite kandidate i zaposlenike brzo, precizno i dokazano",
           type: "website",
           url: "https://jobmatch.hr",
           image: withBase("/logo.png"),
@@ -60,9 +60,8 @@ const { buttons } = header.data;
       }}
     />
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <script src={scriptSrc}></script>
   </head>
   <body class="relative h-auto">
     <Header client:visible links={links} buttons={buttons} />

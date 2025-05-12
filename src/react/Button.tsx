@@ -5,17 +5,22 @@ interface Props {
   size?: "L" | "M";
   className?: string;
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
 export default function Button({
   variant = "primary",
   size = "M",
   className,
+  onClick,
   children,
 }: Props) {
   return (
     <button
       onClick={() => {
+        if (onClick) {
+          onClick();
+        }
         window.scrollTo({
           top: document.body.scrollHeight,
           behavior: "smooth",

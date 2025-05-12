@@ -46,6 +46,12 @@ function Field({
 
 export default function ContactForm({ form }: Props) {
   const PUBLIC_RECAPTCHA_SITE_KEY = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
+
+  const [messageSent, setMessageSent] = useState({
+    isSent: false,
+    success: false,
+  });
+
   const schema = z.object({
     Ime: z.string().min(1, "Ime je obavezno"),
     Email: z.string().email("Email je obavezan"),
@@ -56,7 +62,6 @@ export default function ContactForm({ form }: Props) {
   type ZodErrorType = z.typeToFlattenedError<FormInputsType>["fieldErrors"];
   const [errors, setErrors] = useState<ZodErrorType | null>(null);
 
-  console.log("RECAPTCHA_SITE_KEY", PUBLIC_RECAPTCHA_SITE_KEY);
   const handleSubimt = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const result = schema.safeParse(
@@ -69,21 +74,85 @@ export default function ContactForm({ form }: Props) {
       return;
     }
 
-    // grecaptcha.ready(function () {
-    //   grecaptcha
-    //     .execute(PUBLIC_RECAPTCHA_SITE_KEY, { action: "submit" })
-    //     .then(function (token: string) {
-    //       console.log("token", token);
-    //       // Add your logic to submit to your backend server here.
-    //     });
-    // });
+    grecaptcha.ready(function () {
+      grecaptcha
+        .execute(PUBLIC_RECAPTCHA_SITE_KEY, { action: "submit" })
+        .then(async function (token: string) {
+          console.log(token);
+
+          const backendUrl = `${
+            import.meta.env.PUBLIC_FORM_BACKEND_URL ||
+            "https://staging.thespian.eu"
+          }/api/forms/contact`;
+
+          try {
+            const response = await fetch(backendUrl, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                data: {
+                  company_name: "-",
+                  content: result.data.Poruka,
+                  email: result.data.Email,
+                  name: result.data.Ime,
+                  phone: "-",
+                  subject: "JOBMATCH - Kontakt",
+                },
+                token: "123",
+              }),
+            });
+            if (!response.ok) {
+              throw new Error(`Response status: ${response.status}`);
+            }
+
+            const json = await response.json();
+            console.log(json);
+            if (json.message === "success") {
+              setMessageSent({
+                isSent: true,
+                success: true,
+              });
+            } else {
+              setMessageSent({
+                isSent: true,
+                success: false,
+              });
+            }
+          } catch (error: any) {
+            console.error(error.message);
+            setMessageSent({
+              isSent: true,
+              success: false,
+            });
+          }
+        });
+    });
   };
 
   return (
     <form
       onSubmit={handleSubimt}
-      className="flex flex-col gap-40 p-52 bg-[#F7F7F7] items-start rounded-24"
+      className="flex flex-col relative gap-40 p-52 bg-[#F7F7F7] items-start rounded-24"
     >
+      {messageSent.isSent && (
+        <div className="absolute top-0 left-0 w-full h-full bg-white/70 backdrop-blur-sm overflow-hidden rounded-24 flex items-center justify-center">
+          {messageSent.success ? (
+            <div className="text-body-grey font-medium">
+              Poruka je poslana uspješno
+            </div>
+          ) : (
+            <div className="text-body-grey font-medium text-center max-w-[300px]">
+              Došlo je do greške, molimo pokušajte ponovno ili kontaktirajte nas
+              putem emaila na{" "}
+              <a className="text-primary" href="mailto:info@jobmatch.hr">
+                info@jobmatch.hr
+              </a>
+            </div>
+          )}
+        </div>
+      )}
       <div className="flex   gap-24">
         <Field field={form.fields[0]} errors={errors?.Ime} />
         <Field field={form.fields[1]} errors={errors?.Email} />

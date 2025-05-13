@@ -25,7 +25,7 @@ export default function Header({ links, buttons }: Props) {
   };
   return (
     <>
-      <header className="flex h-72  px-56 py-16 justify-between items-center sticky top-0 backdrop-blur-xl z-50">
+      <header className="select-none flex h-72  px-56 py-16 justify-between items-center sticky top-0 backdrop-blur-xl z-50">
         <div className="left-part flex gap-32 items-center">
           <div className="px-24 py-2">
             <img

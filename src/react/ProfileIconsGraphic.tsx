@@ -13,7 +13,7 @@ export default function ProfileIconsGraphic() {
       <img
         src={withBase("/images/profile-1.webp")}
         alt="Profile icon 1"
-        className="object-cover border-[#E7E8F3] border-2 rounded-16 aspect-square shadow-md z-10 "
+        className="object-cover bg-gray-50 border-[#E7E8F3] border-2 rounded-16 aspect-square shadow-md z-10 "
         width={142}
         height={142}
       />

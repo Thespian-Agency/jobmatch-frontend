@@ -37,7 +37,7 @@ export default function Header({ links, buttons }: Props) {
               height={36}
             />
           </div>
-          <nav className="hidden xldesktop:block">
+          <nav className="hidden desktop:block">
             <ul className="flex gap-24">
               {[
                 "services",
@@ -60,11 +60,11 @@ export default function Header({ links, buttons }: Props) {
             </ul>
           </nav>
         </div>
-        <div className="hidden desktop:flex right-part gap-12">
+        <div className="hidden xldesktop:flex right-part gap-12">
           <Button variant="primary">{buttons["schedule_demo"]}</Button>
           <Button variant="secondary">{buttons["contact_us"]}</Button>
         </div>
-        <div className="flex desktop:hidden right-part gap-12">
+        <div className="flex xldesktop:hidden right-part gap-12">
           <img
             src={withBase(isMenuOpen ? "/icons/x.svg" : "/icons/menu.png")}
             alt="menu"
@@ -74,7 +74,7 @@ export default function Header({ links, buttons }: Props) {
         </div>
       </header>
       {isMenuOpen && (
-        <div className="desktop:hidden fixed top-0 justify-between pb-40  left-0 w-full h-full gap-96 flex flex-col bg-white/50 z-50 backdrop-blur-xl">
+        <div className="xldesktop:hidden fixed top-0 justify-between pb-40  left-0 w-full h-full gap-96 flex flex-col bg-white/50 z-50 backdrop-blur-xl">
           <div className="top-part flex flex-col gap-96 ">
             <div className="flex h-72  px-56 py-16  justify-between items-center">
               <div className="flex px-24 py-2">

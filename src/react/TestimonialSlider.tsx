@@ -30,7 +30,7 @@ const TestimonialSlider = ({ testimonials }: Props) => {
         <p className="heading-2xl font-light text-description-grey">
           {testimonials.title}
         </p>
-        <div className="flex gap-24 justify-end w-full desktop:w-auto">
+        <div className="xldesktop:hidden  flex gap-24 justify-end w-full desktop:w-auto">
           <div
             onClick={handleClickLeft}
             className="flex size-64 items-center cursor-pointer justify-center rounded-full bg-[#F3F3F3]"
@@ -90,10 +90,10 @@ const TestimonialSlider = ({ testimonials }: Props) => {
                 {item.description}
               </p>
             </div>
-            <div className={`author gap-12 flex items-center justify-center`}>
+            <div className={`author gap-12 flex items-center justify-start`}>
               <img
                 className="size-64 rounded-full"
-                src={withBase(`/images/profile-${(i % 3) + 1}.webp`)}
+                src={withBase(`/images/testimonial-${(i % 3) + 1}.webp`)}
                 alt=""
               />
               <div className="flex flex-col">

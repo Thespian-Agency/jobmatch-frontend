@@ -128,6 +128,6 @@ header:
 footer:
   copyright: Copyright © 2025
   powered_by: Powered by
-  legal_notice: Legal notice
-  privacy_policy: Privacy policy
+  legal_notice: Pravna napomena
+  privacy_policy: Politika privatnosti
 ---

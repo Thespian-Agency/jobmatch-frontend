@@ -164,18 +164,18 @@ export default function ContactForm({ form }: Props) {
           Kontaktirajte nas
         </button>
         <div className="text-description-grey text-xs font-light max-w-[300px]">
-          This site is protected by reCAPTCHA and the Google{" "}
+          Ova stranica je zaštićena reCAPTCHA-om, Google-ovom{" "}
           <a
             className="text-primary"
             href="https://policies.google.com/privacy"
           >
-            Privacy Policy
+            Politikom privatnosti
           </a>{" "}
-          and{" "}
+          i{" "}
           <a className="text-primary" href="https://policies.google.com/terms">
-            Terms of Service
+            Politikom korištenja
           </a>{" "}
-          apply.
+          .
         </div>
       </div>
     </form>

@@ -27,7 +27,7 @@ export default function Button({
         });
       }}
       className={classNames(
-        "body-m font-medium  rounded-full cursor-pointer",
+        "select-none body-m font-medium  rounded-full cursor-pointer",
         {
           "py-8 px-10": size === "M",
           "py-16 px-16": size === "L",

@@ -79,7 +79,7 @@ const TestimonialSlider = ({ testimonials }: Props) => {
         ].map((item, i) => (
           <SwiperSlide
             key={"feature-" + i}
-            className="review p-32 gap-56 !flex !h-auto justify-between flex-col rounded-xl bg-[#F7F7F7]"
+            className="review p-32 gap-56 !flex !h-auto justify-between flex-col rounded-32 bg-[#F7F7F7]"
           >
             <div className="flex flex-col gap-32">
               <p

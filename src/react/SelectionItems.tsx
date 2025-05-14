@@ -10,9 +10,18 @@ interface Props {
 }
 
 export default function SelectionItems({ items }: Props) {
+  const [dynamicHeight, setDynamicHeight] = useState<number>(500);
+
   const [selectedItem, setSelectedItem] = useState<number>(0);
   return (
-    <div className="w-full flex items-start desktop:flex-row flex-col gap-40">
+    <div
+      ref={(el) => {
+        if (el) {
+          setDynamicHeight(el.clientHeight);
+        }
+      }}
+      className="w-full flex items-start desktop:flex-row flex-col gap-40"
+    >
       <div className="flex flex-col gap-12 w-full desktop:w-1/2 desktop:pr-44">
         {items.map((item, index) => (
           <div
@@ -57,7 +66,8 @@ export default function SelectionItems({ items }: Props) {
         alt={items[selectedItem].title}
         loading="lazy"
         width={500}
-        height={500}
+        style={{ height: dynamicHeight }}
+        height={dynamicHeight}
         className="desktop:absolute xldesktop:-translate-x-80 relative desktop:w-2/5 w-full right-0 object-cover desktop:rounded-l-32 xldesktop:rounded-r-32 desktop:rounded-r-0 rounded-t-32 rounded-b-0  flex items-center justify-center "
       />
     </div>

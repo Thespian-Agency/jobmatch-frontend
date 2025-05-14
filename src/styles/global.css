@@ -70,7 +70,7 @@
   --color-custom-grey: #ededed;
 
   --color-title-grey: var(--fg-grey-primary);
-  --color-description-grey: var(--fg-grey-tertiary);
+  --color-description-grey: var(--grey-light-700);
   --color-brand-25: var(--brand-25);
   --color-brand-50: var(--brand-50);
   --color-brand-100: var(--brand-100);

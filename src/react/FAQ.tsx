@@ -25,7 +25,7 @@ export default function FAQ({ items }: Props) {
           className={classNames(
             "flex cursor-pointer   flex-col p-24 gap-16 bg-[#F7F7F7] rounded-24 overflow-hidden transition-all duration-400 ease-in-out",
             {
-              "max-h-[300px] delay-100": selectedItem === index,
+              "max-h-[400px] delay-100": selectedItem === index,
               "max-h-[calc(56px+var(--p-responsive-24)+var(--p-responsive-24))]":
                 selectedItem !== index,
             }
@@ -35,7 +35,7 @@ export default function FAQ({ items }: Props) {
             <h3 className="heading-xs text-title-grey font-medium">
               {item.title}
             </h3>
-            <button className="flex items-center justify-center size-56 bg-white rounded-12">
+            <button className="flex items-center justify-center size-56 bg-white rounded-12 aspect-square">
               <img
                 src={withBase("/icons/x.svg")}
                 alt="Chevron down"

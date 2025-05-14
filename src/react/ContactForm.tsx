@@ -157,7 +157,7 @@ export default function ContactForm({ form }: Props) {
       </div>
       <Field field={form.fields[2]} errors={errors?.Poruka} />
 
-      <div className="flex items-center gap-24">
+      <div className="flex items-start desktop:items-center gap-24 flex-col desktop:flex-row">
         <Button type="submit" variant="primary" size="L">
           Kontaktirajte nas
         </Button>

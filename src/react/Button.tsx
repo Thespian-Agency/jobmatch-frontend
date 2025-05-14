@@ -6,6 +6,7 @@ interface Props {
   className?: string;
   children: React.ReactNode;
   onClick?: () => void;
+  type?: "button" | "submit";
 }
 
 export default function Button({
@@ -14,9 +15,11 @@ export default function Button({
   className,
   onClick,
   children,
+  type = "button",
 }: Props) {
   return (
     <button
+      type={type}
       onClick={() => {
         if (onClick) {
           onClick();
@@ -27,12 +30,14 @@ export default function Button({
         });
       }}
       className={classNames(
-        "select-none body-m font-medium  rounded-full cursor-pointer",
+        "select-none body-m font-medium  rounded-full cursor-pointer transition-all duration-300",
         {
           "py-8 px-10": size === "M",
           "py-16 px-16": size === "L",
-          "bg-primary text-fg-grey-primary-white": variant === "primary",
-          "bg-secondary text-fg-grey-secondary": variant === "secondary",
+          "bg-primary hover:bg-primary/90 text-fg-grey-primary-white":
+            variant === "primary",
+          "bg-secondary hover:bg-secondary/90 text-fg-grey-secondary":
+            variant === "secondary",
         },
         className
       )}

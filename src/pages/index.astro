@@ -13,6 +13,7 @@ import ContactForm from "../react/ContactForm.tsx";
 import HeroCarousel from "../react/HeroCarousel.tsx";
 import Button from "../react/Button";
 import { withBase } from "../utils/withBase";
+import TeamPlayer from "../react/TeamPlayer";
 
 const homepage = (await getEntry(
   "homepage",
@@ -169,39 +170,7 @@ const {
     </div>
   </Section>
   <Section pt pb className="">
-    <div class="relative w-full flex items-end justify-end aspect-[2/1]">
-      <Image
-        src={withBase("/images/team-player.webp")}
-        alt="JobMatch team player"
-        width={500}
-        height={500}
-        class="absolute right-0 top-0 w-full h-full rounded-32 object-cover"
-      />
-      <div
-        class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 rounded-32"
-      >
-      </div>
-      <div
-        class="flex w-full justify-between items-end gap-40 relative p-56 desktop:flex-row flex-col"
-      >
-        <div class="flex flex-col gap-24 max-w-[560px]">
-          <h2 class="heading-2xl text-fg-grey-primary-white font-medium">
-            {team_player.title}
-          </h2>
-          <p class="body-xl font-light text-fg-grey-primary-white">
-            {team_player.description}
-          </p>
-        </div>
-        <div class="flex gap-24 desktop:flex-row flex-col">
-          <Button client:visible size="L" variant="primary"
-            >{buttons["try_for_free"]}</Button
-          >
-          <Button client:visible size="L" variant="secondary"
-            >{buttons["contact_us"]}</Button
-          >
-        </div>
-      </div>
-    </div>
+    <TeamPlayer client:visible team_player={team_player} buttons={buttons} />
   </Section>
   <Section pt pb className="flex flex-col gap-80">
     <h2

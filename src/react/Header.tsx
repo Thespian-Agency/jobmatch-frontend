@@ -49,7 +49,7 @@ export default function Header({ links, buttons }: Props) {
               ].map((link) => (
                 <li key={link}>
                   <span
-                    className="body-m cursor-pointer font-regular text-fg-grey-tertiary"
+                    className="body-m cursor-pointer font-regular text-fg-grey-tertiary hover:text-fg-grey-primary"
                     data-id={link}
                     onClick={(e) => handleClick(e, link)}
                   >

@@ -1,6 +1,7 @@
 import { z } from "astro/zod";
 import type { CollectionEntry } from "astro:content";
 import { useState } from "react";
+import Button from "./Button";
 
 type Props = {
   form: CollectionEntry<"homepage">["data"]["form"];
@@ -157,12 +158,9 @@ export default function ContactForm({ form }: Props) {
       <Field field={form.fields[2]} errors={errors?.Poruka} />
 
       <div className="flex items-center gap-24">
-        <button
-          type="submit"
-          className="desktop:w-auto w-full p-16 cursor-pointer rounded-32 bg-primary text-white body-m font-medium"
-        >
+        <Button type="submit" variant="primary" size="L">
           Kontaktirajte nas
-        </button>
+        </Button>
         <div className="text-description-grey text-xs font-light max-w-[300px]">
           Ova stranica je zaštićena reCAPTCHA-om, Google-ovom{" "}
           <a

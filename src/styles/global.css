@@ -441,7 +441,7 @@
 }
 
 .hero-carousel-line-active {
-  animation: hero-carousel-line-active 3s ease-in-out forwards;
+  animation: hero-carousel-line-active 5s ease-in forwards;
 }
 
 body {

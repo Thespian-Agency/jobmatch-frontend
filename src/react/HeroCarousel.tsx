@@ -9,9 +9,9 @@ type LineProps = {
 
 function Line({ active, filled }: LineProps) {
   return (
-    <div className={`w-1/4 h-4 bg-[#D9D9D9] rounded-full`}>
+    <div className={`w-1/4 h-4 bg-white/15 rounded-full`}>
       <div
-        className={classNames("w-0 h-4 bg-primary rounded-full", {
+        className={classNames("w-0 h-4 bg-[#D9D9D9] rounded-full", {
           "hero-carousel-line-active": active,
           "w-full": filled,
         })}
@@ -30,7 +30,7 @@ export default function HeroCarousel() {
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
-    timer.current = setInterval(handleNext, 3000);
+    timer.current = setInterval(handleNext, 5000);
     return () => {
       if (timer.current) {
         clearInterval(timer.current);

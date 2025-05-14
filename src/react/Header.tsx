@@ -61,8 +61,12 @@ export default function Header({ links, buttons }: Props) {
           </nav>
         </div>
         <div className="hidden xldesktop:flex right-part gap-12">
-          <Button variant="primary">{buttons["schedule_demo"]}</Button>
-          <Button variant="secondary">{buttons["contact_us"]}</Button>
+          <Button variant="primary" subjectOption="Ugovoriti demo">
+            {buttons["schedule_demo"]}
+          </Button>
+          <Button variant="secondary" subjectOption="Poslati upit">
+            {buttons["contact_us"]}
+          </Button>
         </div>
         <div className="flex xldesktop:hidden right-part gap-12">
           <img
@@ -123,6 +127,7 @@ export default function Header({ links, buttons }: Props) {
           <div className="bottom-part flex flex-col gap-24 px-56">
             <div className="flex flex-col gap-24">
               <Button
+                subjectOption="Ugovoriti demo"
                 onClick={() => {
                   setIsMenuOpen(false);
                 }}
@@ -132,6 +137,7 @@ export default function Header({ links, buttons }: Props) {
                 {buttons["schedule_demo"]}
               </Button>
               <Button
+                subjectOption="Poslati upit"
                 onClick={() => {
                   setIsMenuOpen(false);
                 }}

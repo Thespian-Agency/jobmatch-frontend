@@ -65,10 +65,10 @@ export default function TeamPlayer({ team_player, buttons }: Props) {
           </p>
         </div>
         <div className="flex gap-24 xldesktop:flex-row flex-col">
-          <Button size="L" variant="primary">
+          <Button size="L" variant="primary" subjectOption="Ugovoriti demo">
             {buttons["try_for_free"]}
           </Button>
-          <Button size="L" variant="secondary">
+          <Button size="L" variant="secondary" subjectOption="Poslati upit">
             {buttons["contact_us"]}
           </Button>
         </div>

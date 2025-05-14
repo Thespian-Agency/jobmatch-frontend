@@ -50,11 +50,17 @@ const {
         </p>
       </div>
       <div class="flex gap-24">
-        <Button client:visible size="L" variant="primary"
-          >{buttons["schedule_demo"]}</Button
+        <Button
+          client:visible
+          size="L"
+          variant="primary"
+          subjectOption="Ugovoriti demo">{buttons["schedule_demo"]}</Button
         >
-        <Button client:visible size="L" variant="secondary"
-          >{buttons["contact_us"]}</Button
+        <Button
+          client:visible
+          size="L"
+          variant="secondary"
+          subjectOption="Poslati upit">{buttons["contact_us"]}</Button
         >
       </div>
     </div>
@@ -94,9 +100,15 @@ const {
           {results.description}
         </p>
       </div>
-      <Button client:visible size="L" variant="primary" className="w-fit mt-8"
-        >{buttons["schedule_iterpretation"]}</Button
+      <Button
+        client:visible
+        size="L"
+        variant="primary"
+        className="w-fit mt-8"
+        subjectOption="Ugovoriti interpretaciju"
       >
+        {buttons["schedule_iterpretation"]}
+      </Button>
     </div>
     <Image
       class="desktop:absolute relative right-0 top-0 w-full xldesktop:-translate-x-80 desktop:w-2/5 h-full desktop:rounded-l-32 xldesktop:rounded-r-32 desktop:rounded-r-0 rounded-t-32 rounded-b-0 object-cover"
@@ -119,12 +131,22 @@ const {
           {profiles.description}
         </p>
         <div class="flex gap-24 justify-center">
-          <Button client:visible size="L" variant="primary"
-            >{buttons["schedule_demo"]}</Button
+          <Button
+            client:visible
+            size="L"
+            variant="primary"
+            subjectOption="Ugovoriti demo"
           >
-          <Button client:visible size="L" variant="secondary"
-            >{buttons["contact_us"]}</Button
+            {buttons["schedule_demo"]}
+          </Button>
+          <Button
+            client:visible
+            size="L"
+            variant="secondary"
+            subjectOption="Poslati upit"
           >
+            {buttons["contact_us"]}
+          </Button>
         </div>
       </div>
       <ProfileIconsGraphic client:visible />

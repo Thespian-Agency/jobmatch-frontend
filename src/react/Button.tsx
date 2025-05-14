@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import type { subjectOptions } from "./ContactForm";
 
 interface Props {
   variant?: "primary" | "secondary";
@@ -7,6 +8,7 @@ interface Props {
   children: React.ReactNode;
   onClick?: () => void;
   type?: "button" | "submit";
+  subjectOption?: (typeof subjectOptions)[number];
 }
 
 export default function Button({
@@ -16,6 +18,7 @@ export default function Button({
   onClick,
   children,
   type = "button",
+  subjectOption,
 }: Props) {
   return (
     <button
@@ -23,6 +26,12 @@ export default function Button({
       onClick={() => {
         if (onClick) {
           onClick();
+        }
+        if (subjectOption) {
+          const subjectInput = document.getElementById(subjectOption);
+          if (subjectInput) {
+            (subjectInput as HTMLInputElement).checked = true;
+          }
         }
         window.scrollTo({
           top: document.body.scrollHeight,

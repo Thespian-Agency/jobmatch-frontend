@@ -7,6 +7,12 @@ type Props = {
   form: CollectionEntry<"homepage">["data"]["form"];
 };
 
+export const subjectOptions = [
+  "Poslati upit",
+  "Ugovoriti interpretaciju",
+  "Ugovoriti demo",
+] as const;
+
 function Field({
   field,
   errors,
@@ -57,6 +63,7 @@ export default function ContactForm({ form }: Props) {
     Ime: z.string().min(1, "Ime je obavezno"),
     Email: z.string().email("Email je obavezan"),
     Poruka: z.string().min(1, "Poruka je obavezna"),
+    Naslov: z.enum(subjectOptions),
   });
 
   type FormInputsType = z.infer<typeof schema>;
@@ -97,7 +104,7 @@ export default function ContactForm({ form }: Props) {
                   email: result.data.Email,
                   name: result.data.Ime,
                   phone: "-",
-                  subject: "JOBMATCH - Kontakt",
+                  subject: `JobMatch kontakt forma | Želim ${result.data.Naslov.toLowerCase()}`,
                 },
                 token,
               }),
@@ -151,6 +158,31 @@ export default function ContactForm({ form }: Props) {
           )}
         </div>
       )}
+      <div className="flex desktop:flex-row flex-col gap-24 w-full">
+        <label className="body-l text-body-grey font-medium" htmlFor="Naslov">
+          Želim:
+        </label>
+        <div className="flex  flex-wrap gap-8">
+          {subjectOptions.map((option) => (
+            <div key={option} className="flex items-center gap-8">
+              <input
+                defaultChecked={option === "Poslati upit"}
+                type="radio"
+                id={option}
+                name="Naslov"
+                value={option}
+                className="peer hidden"
+              />
+              <label
+                className="body-m peer-checked:bg-primary bg-white peer-checked:text-white  cursor-pointer text-body-grey font-light px-10 py-8 rounded-full"
+                htmlFor={option}
+              >
+                {option}
+              </label>
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="flex desktop:flex-row flex-col gap-24 w-full">
         <Field field={form.fields[0]} errors={errors?.Ime} />
         <Field field={form.fields[1]} errors={errors?.Email} />

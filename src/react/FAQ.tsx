@@ -23,9 +23,9 @@ export default function FAQ({ items }: Props) {
           key={index}
           onClick={() => handleClick(index)}
           className={classNames(
-            "flex cursor-pointer   flex-col p-24 gap-16 bg-[#F7F7F7] rounded-24 overflow-hidden transition-all duration-600 ease-in-out",
+            "flex cursor-pointer   flex-col p-24 gap-16 bg-[#F7F7F7] rounded-24 overflow-hidden transition-all duration-400 ease-in-out",
             {
-              "max-h-[300px]": selectedItem === index,
+              "max-h-[300px] delay-100": selectedItem === index,
               "max-h-[calc(56px+var(--p-responsive-24)+var(--p-responsive-24))]":
                 selectedItem !== index,
             }

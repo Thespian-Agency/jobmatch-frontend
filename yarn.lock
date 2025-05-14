@@ -471,6 +471,11 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.25.3.tgz#b17a2171f9074df9e91bfb07ef99a892ac06412a"
   integrity sha512-ICgUR+kPimx0vvRzf+N/7L7tVSQeE3BYY+NhHRHXS1kBuPO7z2+7ea2HbhDyZdTephgvNvKrlDDKUexuCVBVvg==
 
+"@fontsource-variable/outfit@^5.2.5":
+  version "5.2.5"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/outfit/-/outfit-5.2.5.tgz#f78a80720509cbb8203fbb5adf99dd67cddbe58f"
+  integrity sha512-MejrIp6Cbmd3u5AZtsot8kmhZiyQM5CATsdcBB2hktYIrv5CVekRSUmFDXL4FpF7K70IvFp2ZMfImm5VhnVf7Q==
+
 "@img/sharp-darwin-arm64@0.33.5":
   version "0.33.5"
   resolved "https://registry.yarnpkg.com/@img/sharp-darwin-arm64/-/sharp-darwin-arm64-0.33.5.tgz#ef5b5a07862805f1e8145a377c8ba6e98813ca08"

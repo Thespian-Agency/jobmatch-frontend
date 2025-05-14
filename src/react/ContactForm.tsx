@@ -156,7 +156,7 @@ export default function ContactForm({ form }: Props) {
       </div>
       <Field field={form.fields[2]} errors={errors?.Poruka} />
 
-      <div className="flex items-end gap-24">
+      <div className="flex items-center gap-24">
         <button
           type="submit"
           className="desktop:w-auto w-full p-16 cursor-pointer rounded-32 bg-primary text-white body-m font-medium"

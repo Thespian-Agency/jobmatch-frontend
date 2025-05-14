@@ -444,6 +444,10 @@
   animation: hero-carousel-line-active 3s ease-in-out forwards;
 }
 
+body {
+  font-family: "Outfit Variable", sans-serif;
+}
+
 @keyframes hero-carousel-line-active {
   from {
     width: 0;

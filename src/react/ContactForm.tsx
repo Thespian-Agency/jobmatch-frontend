@@ -2,6 +2,7 @@ import { z } from "astro/zod";
 import type { CollectionEntry } from "astro:content";
 import { useState } from "react";
 import Button from "./Button";
+import classNames from "classnames";
 
 type Props = {
   form: CollectionEntry<"homepage">["data"]["form"];
@@ -59,6 +60,8 @@ export default function ContactForm({ form }: Props) {
     success: false,
   });
 
+  const [pending, setPending] = useState(false);
+
   const schema = z.object({
     Ime: z.string().min(1, "Ime je obavezno"),
     Email: z.string().email("Email je obavezan"),
@@ -72,6 +75,7 @@ export default function ContactForm({ form }: Props) {
 
   const handleSubimt = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     const result = schema.safeParse(
       Object.fromEntries(new FormData(e.target as HTMLFormElement))
     );
@@ -81,6 +85,8 @@ export default function ContactForm({ form }: Props) {
       console.log("errors", errors);
       return;
     }
+
+    setPending(true);
 
     grecaptcha.ready(function () {
       grecaptcha
@@ -109,8 +115,14 @@ export default function ContactForm({ form }: Props) {
                 token,
               }),
             });
+            setPending(false);
             if (!response.ok) {
-              throw new Error(`Response status: ${response.status}`);
+              // throw new Error(`Response status: ${response.status}`);
+              setPending(false);
+              setMessageSent({
+                isSent: true,
+                success: false,
+              });
             }
 
             const json = await response.json();
@@ -127,6 +139,7 @@ export default function ContactForm({ form }: Props) {
             }
           } catch (error: any) {
             console.error(error.message);
+            setPending(false);
             setMessageSent({
               isSent: true,
               success: false,
@@ -190,8 +203,15 @@ export default function ContactForm({ form }: Props) {
       <Field field={form.fields[2]} errors={errors?.Poruka} />
 
       <div className="flex items-start desktop:items-center gap-24 flex-col desktop:flex-row">
-        <Button type="submit" variant="primary" size="L">
-          Kontaktirajte nas
+        <Button
+          type="submit"
+          variant="primary"
+          size="L"
+          className={classNames({
+            "opacity-50 cursor-default pointer-events-none": pending,
+          })}
+        >
+          {pending ? "Slanje..." : "Kontaktirajte nas"}
         </Button>
         <div className="text-description-grey text-xs font-light max-w-[300px]">
           Ova stranica je zaštićena reCAPTCHA-om, Google-ovom{" "}

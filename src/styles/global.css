@@ -336,7 +336,7 @@
   --text-16: var(--responsive-font-size-16);
   --text-16--line-height: var(--responsive-line-height-24);
   --text-18: var(--responsive-font-size-18);
-  --text-18--line-height: var(--responsive-line-height-24);
+  --text-18--line-height: var(--responsive-line-height-28);
   --text-20: var(--responsive-font-size-20);
   --text-20--line-height: var(--responsive-line-height-28);
   --text-24: var(--responsive-font-size-24);

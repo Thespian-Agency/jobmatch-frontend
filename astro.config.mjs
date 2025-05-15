@@ -7,8 +7,9 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://jobmatch.hr",
-  base: "/jobmatch-frontend/",
+  site: "https://jobmatchtalent.hr",
+  // base: "/jobmatch-frontend", // repository name
+  trailingSlash: "never",
   vite: {
     ssr: {
       // noExternal: true,

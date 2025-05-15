@@ -1,1 +1,1 @@
-export const withBase = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+export const withBase = (path: string) => `${path}`;

@@ -14,6 +14,7 @@ const header = (await getEntry(
 )) as CollectionEntry<"homepage">;
 const { links } = header.data.header;
 const { buttons } = header.data;
+const PUBLIC_RECAPTCHA_SITE_KEY = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY;
 ---
 
 <!doctype html>
@@ -61,6 +62,11 @@ const { buttons } = header.data;
     />
 
     <meta name="generator" content={Astro.generator} />
+    <script
+      is:inline
+      defer
+      src={`https://www.google.com/recaptcha/api.js?render=${PUBLIC_RECAPTCHA_SITE_KEY}`}
+    ></script>
   </head>
   <body class="relative h-auto">
     <Header client:visible links={links} buttons={buttons} />

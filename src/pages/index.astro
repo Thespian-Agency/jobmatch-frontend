@@ -14,7 +14,6 @@ import HeroCarousel from "../react/HeroCarousel.tsx";
 import Button from "../react/Button";
 import { withBase } from "../utils/withBase";
 import TeamPlayer from "../react/TeamPlayer";
-import RecaptchaScript from "../components/RecaptchaScript.astro";
 
 const homepage = (await getEntry(
   "homepage",
@@ -237,11 +236,9 @@ const {
     className="flex w-full justify-between desktop:flex-row flex-col gap-80"
   >
     <div class="max-w-[400px]">
-      <h2 class="heading-2xl text-title-grey font-semibold">
-        {form.title}
-      </h2>
+      <h2 class="heading-2xl text-title-grey font-semibold">{form.title}</h2>
     </div>
-    <RecaptchaScript client:idle />
+
     <ContactForm client:only="react" form={form} />
   </Section>
 </Layout>

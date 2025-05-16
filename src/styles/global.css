@@ -71,6 +71,7 @@
 
   --color-title-grey: var(--fg-grey-primary);
   --color-description-grey: var(--grey-light-700);
+
   --color-brand-25: var(--brand-25);
   --color-brand-50: var(--brand-50);
   --color-brand-100: var(--brand-100);
@@ -83,19 +84,6 @@
   --color-brand-800: var(--brand-800);
   --color-brand-900: var(--brand-900);
   --color-brand-950: var(--brand-950);
-
-  --color-green-25: var(--green-25);
-  --color-green-50: var(--green-50);
-  --color-green-100: var(--green-100);
-  --color-green-200: var(--green-200);
-  --color-green-300: var(--green-300);
-  --color-green-400: var(--green-400);
-  --color-green-500: var(--green-500);
-  --color-green-600: var(--green-600);
-  --color-green-700: var(--green-700);
-  --color-green-800: var(--green-800);
-  --color-green-900: var(--green-900);
-  --color-green-950: var(--green-950);
 
   --color-grey-dark-25: var(--grey-dark-25);
   --color-grey-dark-50: var(--grey-dark-50);
@@ -123,80 +111,7 @@
   --color-grey-light-900: var(--grey-light-900);
   --color-grey-light-950: var(--grey-light-950);
 
-  --color-red-25: var(--red-25);
-  --color-red-50: var(--red-50);
-  --color-red-100: var(--red-100);
-  --color-red-200: var(--red-200);
-  --color-red-300: var(--red-300);
-  --color-red-400: var(--red-400);
-  --color-red-500: var(--red-500);
   --color-red-600: var(--red-600);
-  --color-red-700: var(--red-700);
-  --color-red-800: var(--red-800);
-  --color-red-900: var(--red-900);
-  --color-red-950: var(--red-950);
-
-  --color-yellow-25: var(--yellow-25);
-  --color-yellow-50: var(--yellow-50);
-  --color-yellow-100: var(--yellow-100);
-  --color-yellow-200: var(--yellow-200);
-  --color-yellow-300: var(--yellow-300);
-  --color-yellow-400: var(--yellow-400);
-  --color-yellow-500: var(--yellow-500);
-  --color-yellow-600: var(--yellow-600);
-  --color-yellow-700: var(--yellow-700);
-  --color-yellow-800: var(--yellow-800);
-  --color-yellow-900: var(--yellow-900);
-  --color-yellow-950: var(--yellow-950);
-
-  /* Background - Alert */
-  --color-bga-error-primary-solid-active: var(--bga-error-primary-solid-active);
-  --color-bga-error-primary-solid-hover: var(--bga-error-primary-solid-hover);
-  --color-bga-warning-primary-solid-active: var(
-    --bga-warning-primary-solid-active
-  );
-  --color-bga-warning-primary-solid-hover: var(
-    --bga-warning-primary-solid-hover
-  );
-  --color-bga-success-primary-solid-active: var(
-    --bga-success-primary-solid-active
-  );
-  --color-bga-success-primary-solid-hover: var(
-    --bga-success-primary-solid-hover
-  );
-
-  /* Background - Alerts */
-  --color-bgal-error-primary-hover: var(--bgal-error-primary-hover);
-  --color-bgal-error-secondary-active: var(--bgal-error-secondary-active);
-  --color-bgal-error-secondary-hover: var(--bgal-error-secondary-hover);
-  --color-bgal-error-tertiary: var(--bgal-error-tertiary);
-  --color-bgal-warning-primary-hover: var(--bgal-warning-primary-hover);
-  --color-bgal-warning-secondary-active: var(--bgal-warning-secondary-active);
-  --color-bgal-warning-secondary-hover: var(--bgal-warning-secondary-hover);
-  --color-bgal-warning-tertiary: var(--bgal-warning-tertiary);
-  --color-bgal-success-primary-hover: var(--bgal-success-primary-hover);
-  --color-bgal-success-secondary-active: var(--bgal-success-secondary-active);
-  --color-bgal-success-secondary-active-2: var(
-    --bgal-success-secondary-active-2
-  );
-  --color-bgal-success-tertiary: var(--bgal-success-tertiary);
-
-  /* Background */
-  --color-bg-brand-primary-hover: var(--bg-brand-primary-hover);
-  --color-bg-brand-primary-pressed: var(--bg-brand-primary-pressed);
-  --color-bg-brand-primary-pressed-hover: var(--bg-brand-primary-pressed-hover);
-  --color-bg-brand-secondary-active: var(--bg-brand-secondary-active);
-  --color-bg-brand-secondary-hover: var(--bg-brand-secondary-hover);
-  --color-bg-brand-secondary-pressed: var(--bg-brand-secondary-pressed);
-  --color-bg-brand-tertiary-active: var(--bg-brand-tertiary-active);
-
-  /* Background - Brand */
-  --color-bg-brand-primary-solid-blue-active: var(
-    --bg-brand-primary-solid-blue-active
-  );
-  --color-bg-brand-primary-solid-blue-hover: var(
-    --bg-brand-primary-solid-blue-hover
-  );
 
   /* Background - Grey */
   --color-bg-grey-primary-active: var(--bg-grey-primary-active);
@@ -208,30 +123,8 @@
   --color-bg-grey-tertiary-active: var(--bg-grey-tertiary-active);
   --color-bg-grey-tertiary-hover: var(--bg-grey-tertiary-hover);
 
-  /* Background - Inactive */
-  --color-bg-grey-inactive-disabled: var(--bg-grey-inactive-disabled);
-  --color-bg-brand-inactive-disabled: var(--bg-brand-inactive-disabled);
-
-  /* Background - Surface */
-  --color-sf-brand-primary: var(--sf-brand-primary);
-
-  --color-sf-grey-primary: var(--sf-grey-primary);
-  --color-sf-grey-primary-inverted: var(--sf-grey-primary-inverted);
-  --color-sf-grey-secondary: var(--sf-grey-secondary);
-  --color-sf-grey-secondary-inverted: var(--sf-grey-secondary-inverted);
-  --color-sf-grey-tertiary: var(--sf-grey-tertiary);
-  --color-sf-grey-tertiary-inverted: var(--sf-grey-tertiary-inverted);
-  --color-sf-grey-quaternary: var(--sf-grey-quaternary);
-  --color-sf-grey-quaternary-inverted: var(--sf-grey-quaternary-inverted);
-
   /* Foreground */
   --color-fg-error-primary: var(--fg-error-primary);
-  --color-fg-error-primary-hover: var(--fg-error-primary-hover);
-  --color-fg-error-secondary: var(--fg-error-secondary);
-  --color-fg-warning-primary: var(--fg-warning-primary);
-  --color-fg-warning-secondary: var(--fg-warning-secondary);
-  --color-fg-success-primary: var(--fg-success-primary);
-  --color-fg-success-secondary: var(--fg-success-secondary);
 
   /* Foreground - Brand */
   --color-fg-brand-primary: var(--fg-brand-primary);
@@ -240,39 +133,14 @@
   --color-fg-brand-tertiary: var(--fg-brand-tertiary);
 
   /* Foreground - Grey */
-  --color-fg-grey-primary-white: var(--fg-grey-primary-white);
-  --color-fg-grey-primary: var(--fg-grey-primary);
-  --color-fg-grey-secondary: var(--fg-grey-secondary);
-  --color-fg-grey-secondary-hover: var(--fg-grey-secondary-hover);
-  --color-fg-grey-tertiary: var(--fg-grey-tertiary);
-  --color-fg-grey-tertiary-hover: var(--fg-grey-tertiary-hover);
   --color-fg-grey-quarternary: var(--fg-grey-quarternary);
-  --color-fg-grey-quarternary-hover: var(--fg-grey-quarternary-hover);
-  --color-fg-grey-quinary: var(--fg-grey-quinary);
-  --color-fg-grey-quinary-hover: var(--fg-grey-quinary-hover);
-
-  /* Foreground - Inactive */
-  --color-fg-inactive-placeholder: var(--fg-inactive-placeholder);
-  --color-fg-inactive-disabled: var(--fg-inactive-disabled);
-  --color-fg-inactive-disabled-subtle: var(--fg-inactive-disabled-subtle);
-  --color-fg-inactive-disabled-white: var(--fg-inactive-disabled-white);
+  --color-fg-grey-primary-white: var(--fg-grey-primary-white);
+  --color-fg-grey-secondary: var(--fg-grey-secondary);
+  --color-fg-grey-tertiary: var(--fg-grey-tertiary);
+  --color-fg-grey-primary: var(--fg-grey-primary);
 
   /* Border color */
-  --color-stroke-error-primary: var(--stroke-error-primary);
-  --color-stroke-error-secondary: var(--stroke-error-secondary);
-  --color-stroke-warning-primary: var(--stroke-warning-primary);
-  --color-stroke-warning-secondary: var(--stroke-warning-secondary);
-  --color-stroke-success-primary: var(--stroke-success-primary);
-  --color-stroke-success-secondary: var(--stroke-success-secondary);
-
-  --color-stroke-brand-primary: var(--stroke-brand-primary);
-  --color-stroke-brand-secondary: var(--stroke-brand-secondary);
-  --color-stroke-brand-tertiary: var(--stroke-brand-tertiary);
-
   --color-stroke-grey-primary: var(--stroke-grey-primary);
-  --color-stroke-grey-primary-on-brand: var(--stroke-grey-primary-on-brand);
-  --color-stroke-grey-secondary: var(--stroke-grey-secondary);
-  --color-stroke-grey-tertiary: var(--stroke-grey-tertiary);
 
   /* Spacing */
   --spacing-0: 0px;

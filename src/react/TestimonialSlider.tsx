@@ -72,11 +72,7 @@ const TestimonialSlider = ({ testimonials }: Props) => {
           },
         }}
       >
-        {[
-          ...testimonials.items,
-          ...testimonials.items,
-          ...testimonials.items,
-        ].map((item, i) => (
+        {testimonials.items.map((item, i) => (
           <SwiperSlide
             key={"feature-" + i}
             className="select-none cursor-grab review p-32 gap-56 !flex !h-auto justify-between flex-col rounded-32 bg-[#F7F7F7]"
@@ -93,7 +89,7 @@ const TestimonialSlider = ({ testimonials }: Props) => {
             <div className={`author gap-12 flex items-center justify-start`}>
               <img
                 className="size-64 rounded-full"
-                src={withBase(`/images/testimonial-${(i % 3) + 1}.webp`)}
+                src={withBase(`/images/testimonial-${i + 1}.webp`)}
                 alt=""
               />
               <div className="flex flex-col">

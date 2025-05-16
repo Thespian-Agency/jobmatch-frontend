@@ -25,7 +25,7 @@ export default function FAQ({ items }: Props) {
           className={classNames(
             "flex cursor-pointer   flex-col p-24 gap-16 bg-[#F7F7F7] rounded-24 overflow-hidden transition-all duration-400 ease-in-out",
             {
-              "max-h-[400px] delay-100": selectedItem === index,
+              "max-h-[550px] delay-100": selectedItem === index,
               "max-h-[calc(56px+var(--p-responsive-24)+var(--p-responsive-24))]":
                 selectedItem !== index,
             }
@@ -49,6 +49,10 @@ export default function FAQ({ items }: Props) {
             </button>
           </div>
           <p
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+            dangerouslySetInnerHTML={item.description}
             className={classNames(
               "body-l text-body-grey font-light max-w-[1000px]  transition-all duration-600 ease-in-out",
               {
@@ -56,9 +60,7 @@ export default function FAQ({ items }: Props) {
                 "opacity-100": selectedItem === index,
               }
             )}
-          >
-            {item.description}
-          </p>
+          ></p>
         </div>
       ))}
     </div>

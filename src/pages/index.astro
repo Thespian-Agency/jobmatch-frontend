@@ -14,6 +14,7 @@ import HeroCarousel from "../react/HeroCarousel.tsx";
 import Button from "../react/Button";
 import { withBase } from "../utils/withBase";
 import TeamPlayer from "../react/TeamPlayer";
+import RecaptchaScript from "../components/RecaptchaScript.astro";
 
 const homepage = (await getEntry(
   "homepage",
@@ -154,9 +155,10 @@ const {
   </Section>
   <Section id="advantages" pt pb className="flex flex-col gap-80">
     <div class="flex flex-col gap-40">
-      <h2 class="heading-2xl text-title-grey font-light">
-        {advantages.title}
-      </h2>
+      <h2
+        set:html={advantages.title}
+        class="heading-2xl text-title-grey font-light"
+      />
       <p class="body-xl font-light text-description-grey max-w-[600px]">
         {advantages.subtitle}
       </p>
@@ -239,6 +241,7 @@ const {
         {form.title}
       </h2>
     </div>
+    <RecaptchaScript client:idle />
     <ContactForm client:only="react" form={form} />
   </Section>
 </Layout>

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import type { subjectOptions } from "./ContactForm";
+import { subjectOptions } from "../data";
 
 interface Props {
   variant?: "primary" | "secondary";

@@ -17,7 +17,11 @@ export default function SelectionItems({ items }: Props) {
     <div
       ref={(el) => {
         if (el) {
-          setDynamicHeight(el.clientHeight);
+          if (window.innerWidth < 1040) {
+            setDynamicHeight(500);
+          } else {
+            setDynamicHeight(el.clientHeight);
+          }
         }
       }}
       className="w-full flex items-start desktop:flex-row flex-col gap-40"

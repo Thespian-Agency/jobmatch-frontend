@@ -41,6 +41,7 @@ export default function HeroCarousel() {
   return (
     <div className="desktop:absolute xldesktop:-translate-x-80 relative top-0 right-0 flex justify-end desktop:w-2/5 w-full items-center flex-col gap-40 h-full">
       <img
+        fetchPriority="high"
         src={withBase(`/images/hero-${currentIndex}.webp`)}
         alt="Hero carousel"
         className=" w-full h-full object-cover desktop:rounded-l-32 xldesktop:rounded-r-32 desktop:rounded-r-0 rounded-t-32 rounded-b-0"

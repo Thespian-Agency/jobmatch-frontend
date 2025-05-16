@@ -84,7 +84,9 @@ const homepageCollection = defineCollection({
       items: z.array(
         z.object({
           title: z.string(),
-          description: z.string(),
+          description: z.string().transform((val) => ({
+            __html: val,
+          })),
         })
       ),
     }),

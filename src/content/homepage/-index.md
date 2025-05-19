@@ -54,7 +54,7 @@ advantages:
 testimonials:
   title: Što kažu naši klijenti
   items:
-    - title: Preciznost JobMatch Talent testa pomogla mi je da budem usmjerenija i učinkovitija.
+    - title: Preciznost <span class="text-primary">JobMatch</span> Talent testa pomogla mi je da budem usmjerenija i učinkovitija.
       description: Preciznost JobMatch Talent testa pomogla mi je da budem usmjerenija i učinkovitija nego ikad prije, kako u karijernom savjetovanju, tako i u razvoju timova.
       author:
         name: Adela Carlsson

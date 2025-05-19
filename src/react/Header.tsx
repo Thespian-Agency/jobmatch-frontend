@@ -61,7 +61,7 @@ export default function Header({ links, buttons }: Props) {
           </nav>
         </div>
         <div className="hidden xldesktop:flex right-part gap-12">
-          <Button variant="primary" subjectOption="Ugovoriti demo">
+          <Button variant="primary" subjectOption="Dogovoriti demo">
             {buttons["schedule_demo"]}
           </Button>
           <Button variant="secondary" subjectOption="Poslati upit">
@@ -127,7 +127,7 @@ export default function Header({ links, buttons }: Props) {
           <div className="bottom-part flex flex-col gap-24 px-56">
             <div className="flex flex-col gap-24">
               <Button
-                subjectOption="Ugovoriti demo"
+                subjectOption="Dogovoriti demo"
                 onClick={() => {
                   setIsMenuOpen(false);
                 }}

@@ -120,7 +120,7 @@ export default function ContactForm({ form }: Props) {
             </div>
           ) : (
             <div className="text-body-grey font-medium text-center max-w-[300px]">
-              Došlo je do greške, molimo pokušajte ponovno ili kontaktirajte nas
+              Došlo je do greške, molimo pokušajte ponovno ili nas kontaktirajte
               putem emaila na{" "}
               <a className="text-primary" href="mailto:info@jobmatchtalent.hr">
                 info@jobmatchtalent.hr

@@ -25,9 +25,9 @@ export default function Header({ links, buttons }: Props) {
   };
   return (
     <>
-      <header className="select-none flex h-72  px-56 py-16 justify-between items-center sticky top-0 backdrop-blur-xl z-50">
+      <header className=" select-none flex h-72  px-16 py-16 tablet:px-56 tablet:py-16 justify-between items-center sticky top-0 backdrop-blur-xl z-50">
         <div className="left-part flex gap-32 items-center">
-          <div className="px-24 py-2">
+          <div className="tablet:px-24 py-2">
             <img
               className="cursor-pointer"
               src={withBase("/logo.png")}
@@ -80,8 +80,8 @@ export default function Header({ links, buttons }: Props) {
       {isMenuOpen && (
         <div className="xldesktop:hidden fixed top-0 justify-between pb-40  left-0 w-full h-full gap-96 flex flex-col bg-white/50 z-50 backdrop-blur-xl">
           <div className="top-part flex flex-col gap-96 ">
-            <div className="flex h-72  px-56 py-16  justify-between items-center">
-              <div className="flex px-24 py-2">
+            <div className="flex h-72  px-16 tablet:px-56 py-16  justify-between items-center">
+              <div className="flex tablet:px-24 py-2">
                 <a data-id="home" className="cursor-pointer">
                   <img
                     src={withBase("/logo.png")}

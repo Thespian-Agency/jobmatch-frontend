@@ -13,8 +13,8 @@ const { className, pt = false, pb = false, id } = Astro.props;
   class:list={[
     "flex relative tablet:px-80 max-w-screen-xldesktop px-16 w-full justify-center",
     {
-      "desktop:pt-128 tablet:pt-64 mobile:pt-32": pt,
-      "desktop:pb-128 tablet:pb-64 mobile:pb-32": pb,
+      "desktop:pt-128 pt-64": pt,
+      "desktop:pb-128 pb-64": pb,
     },
   ]}
   id={id}

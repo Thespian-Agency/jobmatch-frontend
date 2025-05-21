@@ -129,8 +129,11 @@ export default function ContactForm({ form }: Props) {
           )}
         </div>
       )}
-      <div className="flex desktop:flex-row flex-col gap-24 w-full">
-        <label className="body-l text-body-grey font-medium" htmlFor="Naslov">
+      <div className="flex items-start desktop:flex-row flex-col gap-24 w-full">
+        <label
+          className="body-l text-body-grey mt-5 font-medium"
+          htmlFor="Naslov"
+        >
           Želim:
         </label>
         <div className="flex  flex-wrap gap-8">

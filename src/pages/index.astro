@@ -236,7 +236,10 @@ const {
     className="flex w-full justify-between desktop:flex-row flex-col gap-80"
   >
     <div class="max-w-[400px]">
-      <h2 class="heading-2xl text-title-grey font-semibold">{form.title}</h2>
+      <h2
+        set:html={form.title}
+        class="heading-2xl text-title-grey font-semibold"
+      />
     </div>
 
     <ContactForm client:only="react" form={form} />

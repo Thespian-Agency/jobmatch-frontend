@@ -2,7 +2,7 @@
 buttons:
   schedule_demo: Dogovorite demo
   contact_us: Kontaktirajte nas
-  schedule_iterpretation: Ugovorite interpretaciju
+  schedule_iterpretation: Dogovorite interpretaciju
   try_for_free: Isprobajte JobMatch besplatno
 hero:
   title: Kandidat zna što želite čuti. <span class="text-primary">JobMatch</span> zna što trebate znati.
@@ -30,7 +30,7 @@ services:
         title: Certifikacija (JobMatch Certificate)
         description: Idite korak dalje od rezultata
       title: Dubinsko razumijevanje profila
-      description: Samostalno tumačite rezultate, donosite sigurnije odluka i steknite certifikat koji potvrđuje vašu stručnost.
+      description: Samostalno tumačite rezultate, donosite sigurnije odluke i steknite certifikat koji potvrđuje vašu stručnost.
 results:
   title: Izvještaj je tek početak.
   description: Naši stručnjaci vam kroz konkretne primjere otkrivaju kako se osobine iz profila povezuju u ponašanje ispitanika i kako se ono ogleda na poslu.
@@ -107,7 +107,7 @@ faq:
     - title: Mogu li dobiti dublje tumačenje rezultata testova?
       description: Naravno! Naši JobMatch stručnjaci nude interpretacije uživo te online koje pomažu da sve informacije stavite u konkretan, poslovno koristan kontekst.
 form:
-  title: Isprobajte JobMatch besplatno
+  title: Isprobajte <span class="text-primary">JobMatch</span> besplatno
   fields:
     - title: Ime
       placeholder: Unesite svoje ime

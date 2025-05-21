@@ -18,7 +18,7 @@ export default function TeamPlayer({ team_player, buttons }: Props) {
   }, []);
 
   return (
-    <div className="relative w-full flex items-end justify-end xldesktop:aspect-[2/1] tablet:aspect-square aspect-[1/1.8]">
+    <div className="relative w-full flex items-end justify-end xldesktop:aspect-[2/1] tablet:aspect-square aspect-[1/2.1]">
       <img
         src={withBase("/images/team-player.webp")}
         alt="JobMatch team player"
@@ -64,7 +64,7 @@ export default function TeamPlayer({ team_player, buttons }: Props) {
             {team_player.description}
           </p>
         </div>
-        <div className="flex gap-24 xldesktop:flex-row flex-col">
+        <div className="flex gap-24 w-full tablet:w-auto xldesktop:flex-row flex-col">
           <Button size="L" variant="primary" subjectOption="Dogovoriti demo">
             {buttons["try_for_free"]}
           </Button>

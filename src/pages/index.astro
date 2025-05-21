@@ -235,11 +235,27 @@ const {
     pb
     className="flex w-full justify-between desktop:flex-row flex-col gap-80"
   >
-    <div class="max-w-[400px]">
+    <div class="max-w-[400px] flex flex-col gap-56">
       <h2
         set:html={form.title}
         class="heading-2xl text-title-grey font-semibold"
       />
+      <div class="flex flex-col gap-10">
+        <a
+          href="tel:+385953453521"
+          class="body-l font-light text-description-grey"
+        >
+          <span class="font-medium">Tel:</span>
+          +385 95 345 3521
+        </a>
+        <a
+          href="mailto:info@jobmatchtalent.hr"
+          class="flex gap-10 body-l font-light"
+        >
+          <span class="font-medium">Email:</span>
+          <span class="">info@jobmatchtalent.hr</span>
+        </a>
+      </div>
     </div>
 
     <ContactForm client:only="react" form={form} />

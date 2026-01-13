@@ -128,7 +128,7 @@ header:
     process: Proces
     faq: FAQ
 footer:
-  copyright: Copyright © 2025
+  copyright: Copyright © 2026
   powered_by: Powered by
   legal_notice: Pravna napomena
   privacy_policy: Politika privatnosti

@@ -51,9 +51,8 @@ export default function ContactForm({ form }: Props) {
         .execute(PUBLIC_RECAPTCHA_SITE_KEY, { action: "submit" })
         .then(async function (token: string) {
           const backendUrl = `${
-            import.meta.env.PUBLIC_FORM_BACKEND_URL ||
-            "https://staging.thespian.eu"
-          }/api/forms/contact`;
+            import.meta.env.PUBLIC_FORM_BACKEND_URL
+          }/api/job_match/contact_us`;
 
           try {
             const response = await fetch(backendUrl, {

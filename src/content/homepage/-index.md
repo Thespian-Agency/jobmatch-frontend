@@ -69,7 +69,25 @@ testimonials:
       author:
         name: Martin Lagerström
         position: Voditelj razvoja voditelja, Statistički zavod Švedske
-
+clientstudycase:
+  title: Client Study Case
+  items:
+    - title: "Sandström’s business coaching develops leaders with the help of Jobmatch Talent"
+      description: "All participants complete a Talent test to gain greater self-awareness of their personal qualities, but also to better understand the strengths of their colleagues, says Ulf Sandström, self-employed."
+      author: "Ulf Sandström, Sandström’s business coaching"
+      image: "/images/case-study-1.jpg"
+    - title: "WRKFRC uses Jobmatch Talent every day: “A tool we completely trust”"
+      description: "When we help our clients find candidates, we go in-depth and are very personal. Jobmatch Talent helps us evaluate work performance and strengthen our experience with additional facts, and thus deliver the highest quality, says Johan Salinder, recruitment manager at Wrkfrc."
+      author: "Johan Salinder, recruitment manager at Wrkfrc"
+      image: "/images/case-study-2.jpg"
+    - title: "How Hässleholm Municipality finds the right candidates with Jobmatch Talent"
+      description: "We use competency-based recruitment to avoid going by gut instinct when recruiting. Using high quality personality tests from Jobmatch helps to ensure that we hire the right candidates."
+      author: "Katarina Borg, HR specialist at Hässleholm Social Services"
+      image: "/images/case-study-3.jpg"
+    - title: "We help people with disabilities to find work"
+      description: "We have noticed that JobMatch Talent offers a valuable support to our participants. The test report is also a great help to employers who receive a clear work profile of the person they appoint, for example they can see their motivations and how a candidate works under stress."
+      author: "Pernilla Andersson, deputy association chair for Sjuhärad Coordinating Association"
+      image: "/images/case-study-4.jpg"
 our_process:
   title: Naš proces
   items:

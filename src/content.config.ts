@@ -57,6 +57,17 @@ const homepageCollection = defineCollection({
         })
       ),
     }),
+    clientstudycase: z.object({
+      title: z.string(),
+      items: z.array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+          author: z.string(),
+          image: z.string(),
+        })
+      ),
+    }),
     our_process: z.object({
       title: z.string(),
       items: z.array(

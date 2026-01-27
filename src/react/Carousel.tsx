@@ -4,16 +4,10 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-interface SlideData {
-  title: string;
-  description: string;
-  bgColor?: string;
-  image?: string;
-}
+import type { CollectionEntry } from "astro:content";
 
 interface CarouselProps {
-  slides: SlideData[];
+  slides: CollectionEntry<"homepage">["data"]["logocarousel"];
   height?: number;
   spaceBetween?: number;
   slidesPerView?: number;
@@ -35,13 +29,19 @@ export default function Carousel({
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
       spaceBetween={spaceBetween}
-      slidesPerView={slidesPerView}
       navigation={navigation}
       autoplay={{ delay: autoplayDuration }}
       pagination={showPagination ? { clickable: true } : false}
       className="w-full"
+      breakpoints={
+        {
+          678: {slidesPerView: slidesPerView -2},
+          992: {slidesPerView: slidesPerView - 1},
+          1400: {slidesPerView: slidesPerView},
+        }
+      }
     >
-      {slides.map((slide, index) => (
+      {slides.items.map((slide, index) => (
         <SwiperSlide key={index}>
           <div className={`"h-[${height}px] px-24 w-full"`}>
             {slide.image && (

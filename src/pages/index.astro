@@ -15,7 +15,6 @@ import Button from "../react/Button";
 import { withBase } from "../utils/withBase";
 import TeamPlayer from "../react/TeamPlayer";
 import Carousel from "../react/Carousel.tsx";
-import { carouselSlides } from "../data.ts";
 
 const homepage = (await getEntry(
   "homepage",
@@ -28,6 +27,7 @@ const {
   results,
   profiles,
   advantages,
+  logocarousel,
   testimonials,
   our_process,
   team_player,
@@ -196,7 +196,7 @@ const {
     <TeamPlayer client:visible team_player={team_player} buttons={buttons} />
   </Section>
   <Section pt pb>
-    <Carousel client:visible slides={carouselSlides} height={350} />
+    <Carousel client:visible slides={logocarousel} height={350} />
   </Section>
   <Section pt pb className="flex flex-col gap-80">
     <h2

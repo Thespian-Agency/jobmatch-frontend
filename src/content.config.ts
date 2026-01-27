@@ -42,6 +42,17 @@ const homepageCollection = defineCollection({
         })
       ),
     }),
+    logocarousel: z.object({
+      title: z.string(),
+      items: z.array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+          bgColor: z.string(),
+          image: z.string(),
+        })
+      ),
+    }),
     testimonials: z.object({
       title: z.string(),
       items: z.array(

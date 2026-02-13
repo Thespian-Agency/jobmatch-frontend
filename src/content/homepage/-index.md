@@ -51,6 +51,21 @@ advantages:
     - title: Nijanse koje odlučuju
       description: JobMatch povezuje 30 osobina u više od 600 kombinacija koje otkrivaju razliku između dobrog i pravog kandidata.
 
+logocarousel:
+  title: Carousel
+  items:
+    - title: Infinium
+      description: "Infinium"
+      bgColor: "bg-blue-100"
+      image: "/images/logo/infinium.png"
+    - title: "Pro4Sec"
+      description: "Pro4Sec"
+      bgColor: "bg-green-100"
+      image: "/images/logo/logoPRO4SEC.svg"
+    - title: "IvanOberan"
+      description: "IvanOberan"
+      bgColor: "bg-red-100"
+      image: "/images/logo/ivanoberan.png"
 testimonials:
   title: Što kažu naši klijenti
   items:

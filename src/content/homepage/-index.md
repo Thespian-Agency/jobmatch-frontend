@@ -52,36 +52,20 @@ advantages:
       description: JobMatch povezuje 30 osobina u više od 600 kombinacija koje otkrivaju razliku između dobrog i pravog kandidata.
 
 logocarousel:
-  title: Carousel SLides - work in progress
+  title: Carousel
   items:
-    - title: Slide 1
-      description: "Ovo je prvi slide"
+    - title: Infinium
+      description: "Infinium"
       bgColor: "bg-blue-100"
-      image: "/images/hero-1.webp"
-    - title: "Slide 2"
-      description: "Ovo je drugi slide ..."
+      image: "/images/logo/infinium.png"
+    - title: "Pro4Sec"
+      description: "Pro4Sec"
       bgColor: "bg-green-100"
-      image: "/images/hero-2.webp"
-    - title: "Slide 3"
-      description: "Ovo je treći slide"
+      image: "/images/logo/logoPRO4SEC.svg"
+    - title: "IvanOberan"
+      description: "IvanOberan"
       bgColor: "bg-red-100"
-      image: "/images/hero-3.webp"
-    - title: "Slide 4"
-      description: "Ovo je četvrti slide"
-      bgColor: "bg-teal-100"
-      image: "/images/profile-1.webp"
-    - title: "Slide 5"
-      description: "Ovo je peti slide"
-      bgColor: "bg-orange-100"
-      image: "/images/profile-2.webp"
-    - title: "Slide 6"
-      description: "Ovo je šesti slide"
-      bgColor: "bg-purple-100"
-      image: "/images/profile-3.webp"
-    - title: "Slide 7"
-      description: "Ovo je sedmi slide"
-      bgColor: "bg-yellow-100"
-      image: "/images/selection-1.webp"
+      image: "/images/logo/ivanoberan.png"
 testimonials:
   title: Što kažu naši klijenti
   items:

@@ -33,13 +33,11 @@ export default function Carousel({
       autoplay={{ delay: autoplayDuration }}
       pagination={showPagination ? { clickable: true } : false}
       className="w-full"
-      breakpoints={
-        {
-          678: {slidesPerView: slidesPerView -2},
-          992: {slidesPerView: slidesPerView - 1},
-          1400: {slidesPerView: slidesPerView},
-        }
-      }
+      breakpoints={{
+        678: { slidesPerView: slidesPerView - 2 },
+        992: { slidesPerView: slidesPerView - 1 },
+        1400: { slidesPerView: slidesPerView },
+      }}
     >
       {slides.items.map((slide, index) => (
         <SwiperSlide key={index}>
@@ -48,7 +46,7 @@ export default function Carousel({
               <img
                 src={slide.image}
                 alt={slide.title}
-                className={`w-full object-cover rounded flex-shrink-0 select-none`}
+                className={`w-full object-contain rounded flex-shrink-0 select-none`}
                 style={{ height: height - 100 }}
               />
             )}

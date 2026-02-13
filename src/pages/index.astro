@@ -195,9 +195,6 @@ const {
   <Section pt pb className="">
     <TeamPlayer client:visible team_player={team_player} buttons={buttons} />
   </Section>
-  <Section pt pb>
-    <Carousel client:visible slides={logocarousel} height={350} />
-  </Section>
   <Section pt pb className="flex flex-col gap-80">
     <h2
       class="heading-2xl text-title-grey font-light"
@@ -225,6 +222,9 @@ const {
         ))
       }
     </div>
+  </Section>
+  <Section pt pb>
+    <Carousel client:visible slides={logocarousel} height={350} />
   </Section>
   <Section id="faq" pt pb className="flex flex-col gap-80">
     <div class="flex flex-col gap-40">

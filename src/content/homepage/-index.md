@@ -58,14 +58,17 @@ logocarousel:
       description: "Infinium"
       bgColor: "bg-blue-100"
       image: "/images/logo/infinium.png"
-    - title: "Pro4Sec"
-      description: "Pro4Sec"
-      bgColor: "bg-green-100"
-      image: "/images/logo/logoPRO4SEC.svg"
+      link: "https://infinum.com/"
     - title: "IvanOberan"
       description: "IvanOberan"
       bgColor: "bg-red-100"
-      image: "/images/logo/ivanoberan.png"
+      image: "/images/logo/ivanOberanWhite.png"
+      link: "https://www.ivanoberan.com/"
+    - title: "Pro4Sec"
+      description: "Pro4Sec"
+      bgColor: "bg-green-100"
+      image: "/images/logo/logoPro4Sec.png"
+      link: "https://pro4sec.com/"
 testimonials:
   title: Što kažu naši klijenti
   items:

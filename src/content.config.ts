@@ -21,7 +21,7 @@ const homepageCollection = defineCollection({
           }),
           title: z.string(),
           description: z.string(),
-        })
+        }),
       ),
     }),
     results: z.object({
@@ -39,7 +39,19 @@ const homepageCollection = defineCollection({
         z.object({
           title: z.string(),
           description: z.string(),
-        })
+        }),
+      ),
+    }),
+    logocarousel: z.object({
+      title: z.string(),
+      items: z.array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+          bgColor: z.string(),
+          image: z.string(),
+          link: z.string().optional(),
+        }),
       ),
     }),
     testimonials: z.object({
@@ -54,7 +66,7 @@ const homepageCollection = defineCollection({
             name: z.string(),
             position: z.string(),
           }),
-        })
+        }),
       ),
     }),
     clientstudycase: z.object({
@@ -74,7 +86,7 @@ const homepageCollection = defineCollection({
         z.object({
           title: z.string(),
           description: z.string(),
-        })
+        }),
       ),
     }),
     team_player: z.object({
@@ -87,7 +99,7 @@ const homepageCollection = defineCollection({
         z.object({
           title: z.string(),
           description: z.string(),
-        })
+        }),
       ),
     }),
     faq: z.object({
@@ -98,7 +110,7 @@ const homepageCollection = defineCollection({
           description: z.string().transform((val) => ({
             __html: val,
           })),
-        })
+        }),
       ),
     }),
     form: z.object({
@@ -107,7 +119,7 @@ const homepageCollection = defineCollection({
         z.object({
           title: z.string(),
           placeholder: z.string(),
-        })
+        }),
       ),
       errors: z.record(z.string(), z.string()),
     }),

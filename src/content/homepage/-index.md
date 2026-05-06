@@ -51,6 +51,29 @@ advantages:
     - title: Nijanse koje odlučuju
       description: JobMatch povezuje 30 osobina u više od 600 kombinacija koje otkrivaju razliku između dobrog i pravog kandidata.
 
+logocarousel:
+  title: Carousel
+  items:
+    - title: Infinium
+      description: "Infinium"
+      bgColor: "bg-blue-100"
+      image: "/images/logo/infinium.png"
+      link: "https://infinum.com/"
+    - title: "IvanOberan"
+      description: "IvanOberan"
+      bgColor: "bg-red-100"
+      image: "/images/logo/ivanOberanWhite.png"
+      link: "https://www.ivanoberan.com/"
+    - title: "Pro4Sec"
+      description: "Pro4Sec"
+      bgColor: "bg-green-100"
+      image: "/images/logo/logoPro4Sec.png"
+      link: "https://pro4sec.com/"
+    - title: "Buckhill"
+      description: "Buckhill"
+      bgColor: "bg-blue-200"
+      image: "/images/logo/buckhill.png"
+      link: "https://www.buckhill.co.uk/"
 testimonials:
   title: Što kažu naši klijenti
   items:

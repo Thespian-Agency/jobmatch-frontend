@@ -69,6 +69,11 @@ logocarousel:
       bgColor: "bg-green-100"
       image: "/images/logo/logoPro4Sec.png"
       link: "https://pro4sec.com/"
+    - title: "Buckhill"
+      description: "Buckhill"
+      bgColor: "bg-blue-200"
+      image: "/images/logo/buckhill.png"
+      link: "https://www.buckhill.co.uk/"
 testimonials:
   title: Što kažu naši klijenti
   items:

@@ -74,6 +74,11 @@ logocarousel:
       bgColor: "bg-blue-200"
       image: "/images/logo/buckhill.png"
       link: "https://www.buckhill.co.uk/"
+    - title: "dm"
+      description: "dm"
+      bgColor: "bg-yellow-100"
+      image: "/images/logo/dmlogo.png"
+      link: "https://www.dm.hr/"
 testimonials:
   title: Što kažu naši klijenti
   items:

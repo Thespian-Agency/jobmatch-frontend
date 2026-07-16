@@ -79,6 +79,11 @@ logocarousel:
       bgColor: "bg-yellow-100"
       image: "/images/logo/dmlogo.png"
       link: "https://www.dm.hr/"
+    - title: "Productive"
+      description: "Productive"
+      bgColor: "bg-slate-100"
+      image: "/images/logo/Productive_logo.svg"
+      link: "https://productive.io/"
 testimonials:
   title: Što kažu naši klijenti
   items:

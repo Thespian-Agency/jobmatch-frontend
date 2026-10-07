@@ -54,36 +54,41 @@ advantages:
 logocarousel:
   title: Carousel
   items:
-    - title: Infinium
-      description: "Infinium"
-      bgColor: "bg-blue-100"
-      image: "/images/logo/infinium.png"
-      link: "https://infinum.com/"
-    - title: "IvanOberan"
-      description: "IvanOberan"
-      bgColor: "bg-red-100"
-      image: "/images/logo/ivanOberanWhite.png"
-      link: "https://www.ivanoberan.com/"
-    - title: "Pro4Sec"
-      description: "Pro4Sec"
-      bgColor: "bg-green-100"
-      image: "/images/logo/logoPro4Sec.png"
-      link: "https://pro4sec.com/"
-    - title: "Buckhill"
-      description: "Buckhill"
-      bgColor: "bg-blue-200"
-      image: "/images/logo/buckhill.png"
-      link: "https://www.buckhill.co.uk/"
     - title: "dm"
       description: "dm"
       bgColor: "bg-yellow-100"
       image: "/images/logo/dmlogo.png"
       link: "https://www.dm.hr/"
+      scale: 1.5
+    - title: Infinum
+      description: "Infinum"
+      bgColor: "bg-blue-100"
+      image: "/images/logo/infinium.png"
+      link: "https://infinum.com/"
+      scale: 1.3
     - title: "Productive"
       description: "Productive"
       bgColor: "bg-slate-100"
       image: "/images/logo/Productive_logo.svg"
       link: "https://productive.io/"
+      scale: 1.1
+    - title: "Buckhill"
+      description: "Buckhill"
+      bgColor: "bg-blue-200"
+      image: "/images/logo/buckhill.png"
+      link: "https://www.buckhill.co.uk/"
+    - title: "Pro4Sec"
+      description: "Pro4Sec"
+      bgColor: "bg-green-100"
+      image: "/images/logo/logoPro4Sec.png"
+      link: "https://pro4sec.com/"
+      scale: 1.1
+    - title: "Ivan Oberan"
+      description: "IvanOberan"
+      bgColor: "bg-red-100"
+      image: "/images/logo/ivanOberanWhite.png"
+      link: "https://www.ivanoberan.com/"
+      scale: 0.9
 testimonials:
   title: Što kažu naši klijenti
   items:

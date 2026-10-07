@@ -51,6 +51,7 @@ const homepageCollection = defineCollection({
           bgColor: z.string(),
           image: z.string(),
           link: z.string().optional(),
+          scale: z.number().optional(),
         }),
       ),
     }),

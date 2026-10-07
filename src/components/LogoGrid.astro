@@ -1,0 +1,96 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { withBase } from "../utils/withBase";
+
+interface Props {
+  logos: CollectionEntry<"homepage">["data"]["logocarousel"]["items"];
+}
+
+const { logos } = Astro.props;
+---
+
+<!--
+  Static logo wall, shown in content order (strongest first).
+  Every logo sits centred in an equal-sized tile so rows and columns line up
+  regardless of logo shape. Each logo is fitted into a --logo-w x --logo-h box;
+  `scale` in content resizes that box to even out optical weight (e.g. enlarge
+  compact marks like dm and very wide wordmarks like Infinum, shrink heavy ones).
+-->
+<ul class="logo-grid grid w-full grid-cols-2 desktop:grid-cols-3 gap-16">
+  {
+    logos.map((logo) => {
+      const tileClass =
+        "logo-grid-tile group flex w-full items-center justify-center px-16 rounded-24 transition-colors duration-300 hover:bg-[#F7F7F7]";
+      const img = (
+        <img
+          src={withBase(logo.image)}
+          alt={logo.title}
+          loading="lazy"
+          class="logo-grid-img select-none transition-transform duration-300 group-hover:scale-105"
+          style={`--logo-scale: ${logo.scale ?? 1}`}
+        />
+      );
+      return (
+        <li class="flex">
+          {logo.link ? (
+            <a
+              href={logo.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class={tileClass}
+            >
+              {img}
+            </a>
+          ) : (
+            <div class={tileClass}>{img}</div>
+          )}
+        </li>
+      );
+    })
+  }
+</ul>
+
+<style>
+  .logo-grid {
+    --logo-w: 120px;
+    --logo-h: 30px;
+    --tile-h: 96px;
+  }
+
+  @media (min-width: 768px) {
+    .logo-grid {
+      --logo-w: 170px;
+      --logo-h: 42px;
+      --tile-h: 136px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .logo-grid {
+      --logo-w: 190px;
+      --logo-h: 48px;
+      --tile-h: 160px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .logo-grid {
+      --logo-w: 210px;
+      --logo-h: 52px;
+      --tile-h: 176px;
+    }
+  }
+
+  .logo-grid-tile {
+    height: var(--tile-h);
+  }
+
+  /* width/height auto + max bounds keep the aspect ratio and let the element
+     hug the logo instead of stretching to the box */
+  .logo-grid-img {
+    width: auto;
+    height: auto;
+    max-width: min(100%, calc(var(--logo-w) * var(--logo-scale)));
+    max-height: calc(var(--logo-h) * var(--logo-scale));
+  }
+</style>

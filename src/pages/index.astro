@@ -14,7 +14,7 @@ import HeroCarousel from "../react/HeroCarousel.tsx";
 import Button from "../react/Button";
 import { withBase } from "../utils/withBase";
 import TeamPlayer from "../react/TeamPlayer";
-import Carousel from "../react/Carousel.tsx";
+import LogoGrid from "../components/LogoGrid.astro";
 
 const homepage = (await getEntry(
   "homepage",
@@ -224,7 +224,7 @@ const {
     </div>
   </Section>
   <Section pt pb>
-    <Carousel client:visible slides={logocarousel} height={200} />
+    <LogoGrid logos={logocarousel.items} />
   </Section>
   <Section id="faq" pt pb className="flex flex-col gap-80">
     <div class="flex flex-col gap-40">
